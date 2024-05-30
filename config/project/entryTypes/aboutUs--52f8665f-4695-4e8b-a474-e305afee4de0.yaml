@@ -1,7 +1,6 @@
-altTranslationKeyFormat: null
-altTranslationMethod: none
+color: amber
 fieldLayouts:
-  b5e066aa-67d2-4730-a5f0-d0611f0c5ccd:
+  78f60e4f-6828-4ed1-846f-5580c85cf2c9:
     tabs:
       -
         elementCondition: null
@@ -30,45 +29,37 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\assets\AssetTitleField
-            uid: f198cdd1-fee2-41b2-a171-e4a5262b19e0
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a2760bd6-cd03-47e5-b0a9-40d59441aab0
             userCondition: null
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            disabled: false
             elementCondition: null
-            id: null
+            fieldUid: aceb685c-e2ab-4797-b484-deef314f6c47 # Description
+            handle: null
             includeInCards: false
             instructions: null
             label: null
-            name: null
-            orientation: null
-            placeholder: null
             providesThumbs: false
-            readonly: false
-            requirable: true
             required: false
-            rows: null
             tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: 1e6cbd7b-0eba-4334-ad0b-a9289d31002d
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2c18d3e4-9c3a-47f7-8390-2ad2038d8489
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 19b38792-e195-4b34-a2b8-c703e40393f8
+        uid: bea20149-7ca0-4687-b559-9cef0efac9de
         userCondition: null
-fs: hardDisk
-handle: images
-name: Images
-sortOrder: 1
-subpath: ''
+handle: aboutUs
+hasTitleField: true
+icon: address-card
+name: 'about us'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
-transformFs: ''
-transformSubpath: ''

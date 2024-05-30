@@ -1,0 +1,25 @@
+{# You can omit the `.twig` when referencing another template: #}
+{% extends '_layout' %}
+
+{# Provide something to the `content` block in `_layout.twig`: #}
+{% block content %}
+    {% set portfolioImage = entry.portfolioImage.one() %}   
+
+    <h1>{{ entry.title | title }}</h1>
+    <p>{{ entry.description }}</p>
+    <time datetime="{{ entry.postDate | atom }}">
+        {{ entry.postDate | date }}
+    </time>
+
+    {% if portfolioImage %}
+        <div class="feature-image">
+            {{ portfolioImage.getImg() }}
+        </div>
+    {% endif %}
+
+    {# or...... <img
+                    src="{{ featureImage.getUrl() }}"
+                    alt="{{ featureImage.alt }}"
+                    width="{{ featureImage.width }}"
+                    height="{{ featureImage.height }}" /> #}
+{% endblock %}

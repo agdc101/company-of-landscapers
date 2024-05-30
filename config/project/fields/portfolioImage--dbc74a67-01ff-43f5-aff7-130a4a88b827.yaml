@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: featureImage
+handle: portfolioImage
 instructions: null
-name: 'Feature Image'
+name: 'Portfolio Image'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -24,7 +24,7 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'

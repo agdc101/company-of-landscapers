@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - bf50b81f-54e8-4247-bbf6-61ecef6a8462 # Portfolio 1
+  - bf50b81f-54e8-4247-bbf6-61ecef6a8462 # portfolio
 handle: portfolio
 maxAuthors: 1
 name: Portfolio
