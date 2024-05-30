@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - bf50b81f-54e8-4247-bbf6-61ecef6a8462 # Portfolio 1
+handle: cunt
+maxAuthors: 1
+name: Cunt
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  102e3dff-3159-462b-a2ee-18957798f6d7: # company-of-landscapers
+    enabledByDefault: true
+    hasUrls: true
+    template: cunt/_entry
+    uriFormat: cunt
+type: single

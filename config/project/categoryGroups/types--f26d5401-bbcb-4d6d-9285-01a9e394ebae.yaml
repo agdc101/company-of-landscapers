@@ -1,0 +1,49 @@
+defaultPlacement: end
+fieldLayouts:
+  c032e1af-444b-43db-bb74-16774c73e25c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\TitleField
+            uid: dd1fb27c-17ba-4e79-945c-f5d5e20ed8ec
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f276f16c-f425-42cb-a213-95b89b2b4622
+        userCondition: null
+handle: types
+name: Types
+siteSettings:
+  102e3dff-3159-462b-a2ee-18957798f6d7: # company-of-landscapers
+    hasUrls: true
+    template: portfolio/_type
+    uriFormat: 'types/{slug}'
+structure:
+  maxLevels: 1
+  uid: 606f85c1-25b6-4050-ad13-75e2311644ef

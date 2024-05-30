@@ -1,0 +1,95 @@
+color: teal
+fieldLayouts:
+  cf9e2e8f-07d0-4ba5-b2a5-df5afeba77a4:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: da59f18b-0777-40a7-8761-2d0545386b66
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aceb685c-e2ab-4797-b484-deef314f6c47 # Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 89e3c548-5305-40dc-8eae-27f6fce559a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: dbc74a67-01ff-43f5-aff7-130a4a88b827 # Feature Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5d9183a0-75c7-4d81-9bf9-1529e40937e6
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 8f75fe13-3a1f-44e6-a18d-1130662e3782 # Portfolio Types
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4bad8162-43cc-4096-9f6f-70b658635a82
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c4254ddb-35e7-4c94-b044-465b1329f0d6
+        userCondition: null
+handle: portfolio1
+hasTitleField: true
+icon: person-digging
+name: 'Portfolio 1'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
