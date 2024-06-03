@@ -1,27 +1,32 @@
-<h1>Hello from Twig!</h1>
+{% extends '_layout' %}
 
-<p>site name: {{ siteName }}</p>
+{% block content %}
 
-<p>site url: {{ siteUrl }}</p>
+  <h1>Hello from Twig!</h1>
 
-<p>system name: {{ systemName }}</p>
+  <p>site name: {{ siteName }}</p>
 
-<p>craft session: {{ craft.app.session.count }}</p>
+  <p>site url: {{ siteUrl }}</p>
 
-<p>Today is {{ now | date }}!</p>
+  <p>system name: {{ systemName }}</p>
 
-<p>Lang = {{ craft.app.language }}</p>
+  <p>craft session: {{ craft.app.session.count }}</p>
 
-{% set colors = ['red', 'green', 'blue'] %}
+  <p>Today is {{ now | date }}!</p>
 
-<p>The following list contains {{ colors | length }} color(s).</p>
+  <p>Lang = {{ craft.app.language }}</p>
 
-<ul>
-  {% for color in colors | sort %}
-    {# Let’s stylize each item using some inline CSS: #}
-    <li style="color: {{ color }}">
-      {# The color is capitalized for display: #}
-      {{ color | title }}
-    </li>
-  {% endfor %}
-</ul>
+  <div class="text">
+  </div>
+  
+  <ul>
+    {% for color in colors | sort %}
+      {# Let’s stylize each item using some inline CSS: #}
+      <li style="color: {{ color }}">
+        {# The color is capitalized for display: #}
+        {{ color | title }}
+      </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

@@ -6,7 +6,9 @@
     {% set portfolioImage = entry.portfolioImage.one() %}   
 
     <h1>{{ entry.title | title }}</h1>
+
     <p>{{ entry.description }}</p>
+
     <time datetime="{{ entry.postDate | atom }}">
         {{ entry.postDate | date }}
     </time>
@@ -17,9 +19,4 @@
         </div>
     {% endif %}
 
-    {# or...... <img
-                    src="{{ featureImage.getUrl() }}"
-                    alt="{{ featureImage.alt }}"
-                    width="{{ featureImage.width }}"
-                    height="{{ featureImage.height }}" /> #}
 {% endblock %}
