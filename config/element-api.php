@@ -2,10 +2,11 @@
 
 use craft\elements\Entry;
 use craft\helpers\UrlHelper;
+use craft\elements\Asset;
 
     return [
         'endpoints' => [
-            'portfolio' => function() {
+            'api/portfolio' => function() {
                 \Craft::$app->response->headers->set('Access-Control-Allow-Origin', '*');
                 return [
                     'elementType' => Entry::class,
@@ -19,7 +20,7 @@ use craft\helpers\UrlHelper;
                     },
                 ];
             },
-            'portfolio/<entryId:\d+>.json' => function($entryId) {
+            'api/portfolio/<entryId:\d+>.json' => function($entryId) {
                 \Craft::$app->response->headers->set('Access-Control-Allow-Origin', '*');
                 return [
                     'elementType' => Entry::class,
@@ -35,6 +36,20 @@ use craft\helpers\UrlHelper;
                     },
                 ];
             },
+            'api/photo.json' => [
+                'resourceKey' => 'photo', // the name of the data returned (parent). 'data' is default.
+                'elementType' => Asset::class,
+                'criteria' => ['volume' => 'images'],
+                'transformer' => function(Asset $asset) {
+                    return [
+                        'slug' => $asset->filename,
+                        'url' => $asset->url,
+                        'title' => $asset->title,
+                        'description' => $asset->description,
+                        'alt' => $asset->alt,
+                    ];
+                },
+            ]
         ],
     ];
  

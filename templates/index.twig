@@ -18,15 +18,6 @@
 
   <div class="text">
   </div>
-  
-  <ul>
-    {% for color in colors | sort %}
-      {# Let’s stylize each item using some inline CSS: #}
-      <li style="color: {{ color }}">
-        {# The color is capitalized for display: #}
-        {{ color | title }}
-      </li>
-    {% endfor %}
-  </ul>
+
 
 {% endblock %}
