@@ -3,6 +3,7 @@
 use craft\elements\Entry;
 use craft\helpers\UrlHelper;
 use craft\elements\Asset;
+use craft\elements\GlobalSet;
 
     return [
         'endpoints' => [
@@ -49,7 +50,21 @@ use craft\elements\Asset;
                         'alt' => $asset->alt,
                     ];
                 },
-            ]
+            ],
+            'api/contact.json' => function() {
+                return [
+                    'elementType' => GlobalSet::class,
+                    'criteria' => ['handle' => 'contactInformation'],
+                    'one' => true,
+                    'transformer' => function(GlobalSet $globalSet) {
+                        return [
+                            'phone' => $globalSet->phoneNumber,
+                            'email' => $globalSet->email,
+                            'address' => $globalSet->streetAddress,
+                        ];
+                    },
+                ];
+            },
         ],
     ];
  

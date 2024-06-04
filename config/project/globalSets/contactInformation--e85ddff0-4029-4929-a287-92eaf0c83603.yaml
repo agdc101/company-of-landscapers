@@ -1,0 +1,72 @@
+fieldLayouts:
+  e38faab6-b393-4884-9cee-573d2f22b1f7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: 5212e7c6-8d20-4c54-9720-1d3464693fb8 # Street Address
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8365eaf5-574a-41c8-a720-21413c811a58
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 6d6d30ea-3be2-411e-ae32-b53bce8c7ff5 # Phone Number
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b2d4b27f-ac40-44b4-b4b2-635a835d6e8a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: bef872f0-be53-4c18-a75b-17c7ab9ea4b4 # Email
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: caf3e3e0-de5e-4ff1-8838-d4172cb5553a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1501e96a-99b5-4803-8e1b-35d30f7ef800 # Social Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 646657b8-bd1e-413b-9285-477728f25874
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Contact Information'
+        uid: dc5ee2d2-ca5e-494c-af91-1088d7ff9fc4
+        userCondition: null
+handle: contactInformation
+name: 'Contact Information'
+sortOrder: 2
