@@ -1,7 +1,9 @@
-isPublic: true
-name: 'Public Schema'
+isPublic: false
+name: 'Company of Landscapers'
 scope:
+  - 'sites.102e3dff-3159-462b-a2ee-18957798f6d7:read' # company-of-landscapers
   - 'sections.d1babea9-964e-43b8-a8df-1396d57e83ae:read' # About us
   - 'sections.a7b1de76-4c29-4448-b3f9-ee346e9c8ecd:read' # Portfolio
   - 'volumes.a64bad47-8bd1-4e6b-941a-c69229d717cb:read' # Images
   - 'globalsets.e85ddff0-4029-4929-a287-92eaf0c83603:read' # Contact Information
+  - 'categorygroups.f26d5401-bbcb-4d6d-9285-01a9e394ebae:read' # Types
