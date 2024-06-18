@@ -1,9 +1,13 @@
 import { gql } from '@apollo/client';
 
-export const GET_ENTRIES = gql`
-    query GetEntries {
-        entries {
-          title
+export const get_homepage = gql`
+    query GetHomepage {
+      entries {
+      ... on home_Entry {
+        id
+        title
+        description
         }
+      }
     }
 `;

@@ -1,4 +1,4 @@
-dateModified: 1718697542
+dateModified: 1718734354
 email:
   fromEmail: agdc101@gmail.com
   fromName: company-of-landscapers
@@ -14,8 +14,10 @@ fs:
 meta:
   __names__:
     4a535fdc-5034-43ae-bbff-b5d1b8b0ec27: company-of-landscapers # company-of-landscapers
+    5be2e150-ee5d-47a2-adf6-eb9b3c1ee82f: Home # Home
     6d6d30ea-3be2-411e-ae32-b53bce8c7ff5: 'Phone Number' # Phone Number
     8f75fe13-3a1f-44e6-a18d-1130662e3782: 'Portfolio Types' # Portfolio Types
+    9d9dcee3-fe9b-41a3-869e-02fb357a8bd1: home # home
     52f8665f-4695-4e8b-a474-e305afee4de0: 'about us' # about us
     102e3dff-3159-462b-a2ee-18957798f6d7: company-of-landscapers # company-of-landscapers
     1501e96a-99b5-4803-8e1b-35d30f7ef800: 'Social Link' # Social Link

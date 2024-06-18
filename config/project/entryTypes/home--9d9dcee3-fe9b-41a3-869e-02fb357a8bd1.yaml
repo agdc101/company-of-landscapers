@@ -1,6 +1,6 @@
-color: amber
+color: red
 fieldLayouts:
-  78f60e4f-6828-4ed1-846f-5580c85cf2c9:
+  fc0b2c30-fa11-4bc1-b522-e0bc960fdd41:
     tabs:
       -
         elementCondition: null
@@ -30,7 +30,7 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: a2760bd6-cd03-47e5-b0a9-40d59441aab0
+            uid: 82a4ca89-5cca-4e6a-9c67-bc0f3e224c36
             userCondition: null
             warning: null
             width: 100
@@ -45,32 +45,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2c18d3e4-9c3a-47f7-8390-2ad2038d8489
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 6d6d30ea-3be2-411e-ae32-b53bce8c7ff5 # Phone Number
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3787efb2-5c5d-45cf-b721-a4d033c5e9fe
+            uid: 16c5379b-fe22-4493-aeed-b6cab1d818d1
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: bea20149-7ca0-4687-b559-9cef0efac9de
+        uid: 70b42984-e6d5-40ef-a6f0-e7d3c14aad3a
         userCondition: null
-handle: aboutUs
+handle: home
 hasTitleField: true
-icon: address-card
-name: 'about us'
+icon: house
+name: home
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

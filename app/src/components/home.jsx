@@ -1,7 +1,8 @@
+
 import { get_homepage } from "../queries";
 import { useQuery } from '@apollo/client';
 
-export default function Portfolio() {
+export default function Home() {
     const { loading, error, data } = useQuery(get_homepage);
 
     if (loading) return <p>Loading...</p>;
@@ -14,7 +15,6 @@ export default function Portfolio() {
         {data.entries.map((post, index) => (
           <div key={index}>
             <h2>{post.title}</h2>
-            <p>{post.slug}</p>
             <p>{post.description}</p>
           </div>
         ))}
