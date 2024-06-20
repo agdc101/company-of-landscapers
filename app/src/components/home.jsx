@@ -3,21 +3,27 @@ import { get_homepage } from "../queries";
 import { useQuery } from '@apollo/client';
 
 export default function Home() {
-    const { loading, error, data } = useQuery(get_homepage);
+  const { loading, error, data } = useQuery(get_homepage);
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  console.log(data);
+
+
   
-    console.log(data);
-  
-    return (
+  return (
+    <section>
+        {data.entry.heroImage.map((post, index) => (
+        <div key={index}>
+          <img src={post.url} alt={post.title} />
+        </div>
+      ))}
       <div>
-        {data.entries.map((post, index) => (
-          <div key={index}>
-            <h2>{post.title}</h2>
-            <p>{post.description}</p>
-          </div>
-        ))}
+        <h2>{data.entry.title}</h2>
+        <p>{data.entry.description}</p>
+        {/* <p>{post.heroImage.title}</p> */}
       </div>
-    );
+    </section>
+  );
 }

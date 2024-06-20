@@ -6,6 +6,21 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            elementCondition: null
+            fieldUid: b001ba68-b3f9-4f1e-8d90-79f570ab6c3c # Hero Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6d3a85a-a3e0-4a27-8e2f-8886b6dc5d20
+            userCondition: null
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
