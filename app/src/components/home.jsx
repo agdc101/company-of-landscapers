@@ -20,7 +20,7 @@ export default function Home() {
         </div>
       ))}
       <div>
-        <h2>{data.entry.title}</h2>
+        <h2 className="flex-auto" >{data.entry.title}</h2>
         <p>{data.entry.description}</p>
         {/* <p>{post.heroImage.title}</p> */}
       </div>
