@@ -1,4 +1,4 @@
-dateModified: 1718867059
+dateModified: 1719042647
 email:
   fromEmail: agdc101@gmail.com
   fromName: company-of-landscapers
@@ -31,6 +31,7 @@ meta:
     bef872f0-be53-4c18-a75b-17c7ab9ea4b4: Email # Email
     bf50b81f-54e8-4247-bbf6-61ecef6a8462: portfolio # portfolio
     ca6860b8-46dc-4946-816c-8951d3c6e415: 'Public Schema' # Public Schema
+    ce74db51-2699-4917-8734-9769c5df7ceb: 'Hero Text' # Hero Text
     d1babea9-964e-43b8-a8df-1396d57e83ae: 'About us' # About us
     dbc74a67-01ff-43f5-aff7-130a4a88b827: 'Portfolio Image' # Portfolio Image
     e85ddff0-4029-4929-a287-92eaf0c83603: 'Contact Information' # Contact Information
