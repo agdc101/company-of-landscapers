@@ -1,6 +1,6 @@
-color: amber
+color: orange
 fieldLayouts:
-  78f60e4f-6828-4ed1-846f-5580c85cf2c9:
+  6dd64e26-e970-4e57-9b02-e62af76e57d9:
     tabs:
       -
         elementCondition: null
@@ -30,7 +30,37 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: a2760bd6-cd03-47e5-b0a9-40d59441aab0
+            uid: b4446cac-bd2a-4d81-8ab2-608de7244f13
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: b001ba68-b3f9-4f1e-8d90-79f570ab6c3c # Hero Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 631c88c7-fd09-4d3f-8084-61c6897b8b43
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: ce74db51-2699-4917-8734-9769c5df7ceb # Hero Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8340550c-a13b-4271-8b7a-0e19fce00030
             userCondition: null
             warning: null
             width: 100
@@ -45,32 +75,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 2c18d3e4-9c3a-47f7-8390-2ad2038d8489
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: 6d6d30ea-3be2-411e-ae32-b53bce8c7ff5 # Phone Number
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 3787efb2-5c5d-45cf-b721-a4d033c5e9fe
+            uid: 8835cdbb-348d-4ec6-a253-0c3531f1b596
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: bea20149-7ca0-4687-b559-9cef0efac9de
+        uid: 95dc20da-182e-4ef4-93ec-c846a6a919c7
         userCondition: null
-handle: aboutUs
+handle: home
 hasTitleField: true
-icon: address-card
-name: 'about us'
+icon: house
+name: home
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

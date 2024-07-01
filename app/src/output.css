@@ -574,22 +574,6 @@ video {
   top: 0px;
 }
 
-.top-\[12\.5rem\] {
-  top: 12.5rem;
-}
-
-.top-\[5rem\] {
-  top: 5rem;
-}
-
-.top-60 {
-  top: 15rem;
-}
-
-.top-40 {
-  top: 10rem;
-}
-
 .top-20 {
   top: 5rem;
 }
@@ -630,10 +614,6 @@ video {
   flex: 1 1 auto;
 }
 
-.items-center {
-  align-items: center;
-}
-
 .justify-between {
   justify-content: space-between;
 }
@@ -652,34 +632,9 @@ video {
      object-fit: cover;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}
-
-.px-4 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
 }
 
 .px-6 {
@@ -687,14 +642,14 @@ video {
   padding-right: 1.5rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-base {
@@ -705,16 +660,6 @@ video {
 .text-lg {
   font-size: 1.125rem;
   line-height: 1.75rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
 }
 
 .font-light {
@@ -837,9 +782,8 @@ button:focus-visible {
     display: flex;
   }
 
-  .lg\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
+  .lg\:hidden {
+    display: none;
   }
 
   .lg\:px-10 {

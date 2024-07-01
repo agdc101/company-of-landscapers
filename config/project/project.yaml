@@ -1,4 +1,4 @@
-dateModified: 1719042647
+dateModified: 1719477851
 email:
   fromEmail: agdc101@gmail.com
   fromName: company-of-landscapers
@@ -14,15 +14,15 @@ fs:
 meta:
   __names__:
     4a535fdc-5034-43ae-bbff-b5d1b8b0ec27: company-of-landscapers # company-of-landscapers
-    5be2e150-ee5d-47a2-adf6-eb9b3c1ee82f: Home # Home
+    5ba59a8e-8f7d-4263-8953-9ecb6b08e60d: about # about
     6d6d30ea-3be2-411e-ae32-b53bce8c7ff5: 'Phone Number' # Phone Number
     8f75fe13-3a1f-44e6-a18d-1130662e3782: 'Portfolio Types' # Portfolio Types
-    9d9dcee3-fe9b-41a3-869e-02fb357a8bd1: home # home
-    52f8665f-4695-4e8b-a474-e305afee4de0: 'about us' # about us
     102e3dff-3159-462b-a2ee-18957798f6d7: company-of-landscapers # company-of-landscapers
     1501e96a-99b5-4803-8e1b-35d30f7ef800: 'Social Link' # Social Link
     4979a5b7-ce59-477e-92d9-70531382c552: Address # Address
     5212e7c6-8d20-4c54-9720-1d3464693fb8: 'Street Address' # Street Address
+    94829161-2dd5-4e9b-afd5-bd800f248757: home # home
+    a020d92f-e1bd-41f9-ab8e-28581deb0902: Home # Home
     a7b1de76-4c29-4448-b3f9-ee346e9c8ecd: Portfolio # Portfolio
     a64bad47-8bd1-4e6b-941a-c69229d717cb: Images # Images
     aceb685c-e2ab-4797-b484-deef314f6c47: Description # Description
@@ -32,7 +32,6 @@ meta:
     bf50b81f-54e8-4247-bbf6-61ecef6a8462: portfolio # portfolio
     ca6860b8-46dc-4946-816c-8951d3c6e415: 'Public Schema' # Public Schema
     ce74db51-2699-4917-8734-9769c5df7ceb: 'Hero Text' # Hero Text
-    d1babea9-964e-43b8-a8df-1396d57e83ae: 'About us' # About us
     dbc74a67-01ff-43f5-aff7-130a4a88b827: 'Portfolio Image' # Portfolio Image
     e85ddff0-4029-4929-a287-92eaf0c83603: 'Contact Information' # Contact Information
     f26d5401-bbcb-4d6d-9285-01a9e394ebae: Types # Types
@@ -45,7 +44,7 @@ system:
   edition: solo
   live: true
   name: company-of-landscapers
-  schemaVersion: 5.0.0.20
+  schemaVersion: 5.0.0.21
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

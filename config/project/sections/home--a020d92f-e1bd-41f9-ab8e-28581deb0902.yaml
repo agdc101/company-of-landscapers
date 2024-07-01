@@ -1,10 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 52f8665f-4695-4e8b-a474-e305afee4de0 # about us
-handle: aboutUs
+  - 94829161-2dd5-4e9b-afd5-bd800f248757 # home
+handle: home
 maxAuthors: 1
-name: 'About us'
+name: Home
 previewTargets:
   -
     __assoc__:
@@ -22,6 +22,6 @@ siteSettings:
   102e3dff-3159-462b-a2ee-18957798f6d7: # company-of-landscapers
     enabledByDefault: true
     hasUrls: true
-    template: about-us/_entry
-    uriFormat: about-us
+    template: home/_entry
+    uriFormat: __home__
 type: single
