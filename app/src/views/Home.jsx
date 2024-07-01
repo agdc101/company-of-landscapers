@@ -1,9 +1,8 @@
-
-import { get_homepage } from "../queries";
+import React from 'react';
 import { useQuery } from '@apollo/client';
-import Header from "./header";
+import { get_homepage } from '../queries';
 
-export default function Home() {
+const Home = () => {
   const { loading, error, data } = useQuery(get_homepage);
 
   if (loading) return <p>Loading...</p>;
@@ -15,12 +14,13 @@ export default function Home() {
     <>
       <section>
         <div>
-            <div className="hero-image-container relative h-screen">
-              <p>{data.entry.title}</p>
-              <p>{data.entry.description}</p>
+            <div className="hero-image-container h-screen">
+              <h1 className="text-4xl text-white font-bold">Welcome to the homepage</h1>
             </div>
         </div>
       </section>
     </>
   );
 }
+
+export default Home;

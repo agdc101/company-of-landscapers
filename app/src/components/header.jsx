@@ -24,7 +24,7 @@ export default function Header({data}) {
                     {/* -=-=-=-=-= */}
                 </div>
                 <div>
-                    <h3 className="w-2/3 leading-relaxed text-white relative top-20 lg:top-40 text-5xl lg:text-6xl font-light tracking-wider">{data.entry.heroText}</h3>
+                    {/* <h3 className="w-2/3 leading-relaxed text-white relative top-20 lg:top-40 text-5xl lg:text-6xl font-light tracking-wider">{data.entry.heroText}</h3> */}
                     <button className="border-white text-white text-base lg:text-lg bg-transparent relative top-[7.5rem] lg:top-[12.5rem]">Learn more</button>
                 </div>
             </div>

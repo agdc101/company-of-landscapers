@@ -1,19 +1,29 @@
 import React from 'react';
-import { ApolloProvider } from '@apollo/client';
 import client from './apolloClient';
-import Header from './components/header';
-import Home from './components/home';
-import About from './components/about';
+import { ApolloProvider } from '@apollo/client';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from 'react-router-dom';
+import Home from './views/Home';
+import About from './views/About';
+import RootLayout from './components/Layout';
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <RootLayout />,
+    children: [
+      { index: true, element: <Home /> },
+      { path: '/about', element: <About />},
+    ],
+  }
+]);
 
 function App() {
   return (
     <ApolloProvider client={client}>
-        <main className="card">
-          {/* <Portfolio /> */}
-          <Header/>
-          <Home/>
-          {/* <About/> */}
-        </main>
+      <RouterProvider router={router} />
     </ApolloProvider>
   );
 }
