@@ -9,6 +9,7 @@ import Home from './views/Home';
 import About from './views/About';
 import RootLayout from './components/Layout';
 
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -19,6 +20,7 @@ const router = createBrowserRouter([
     ],
   }
 ]);
+
 
 function App() {
   return (

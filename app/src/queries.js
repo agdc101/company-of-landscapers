@@ -7,6 +7,11 @@ export const get_homepage = gql`
           id
           title
           description
+          heroText
+          heroImage {
+            alt
+            url
+          }
         }
       }
     }

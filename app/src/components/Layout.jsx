@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Header from "./Header";
+import Nav from "./Nav";
 
 export default function RootLayout() {
     return (
-        <div className="container mx-auto">
-            <Header />
+        <div className="mx-auto">
+            <Nav />
             <main>
                 <Outlet />
             </main>

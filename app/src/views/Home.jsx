@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { get_homepage } from '../queries';
+import Hero from '../components/Hero';
 
 const Home = () => {
   const { loading, error, data } = useQuery(get_homepage);
@@ -12,12 +13,11 @@ const Home = () => {
 
   return (
     <>
+      <Hero imageUrl={data.entry.heroImage[0].url} imageAlt={data.entry.heroImage[0].alt} text={data.entry.heroText} />
       <section>
-        <div>
-            <div className="hero-image-container h-screen">
+            <div className="h-screen">
               <h1 className="text-4xl text-white font-bold">Welcome to the homepage</h1>
             </div>
-        </div>
       </section>
     </>
   );

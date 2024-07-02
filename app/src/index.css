@@ -26,13 +26,6 @@ a:hover {
   color: #88a785;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-}
-
 h1, h2, h3 {
   font-family: "Playwrite AU TAS", cursive;
 }
