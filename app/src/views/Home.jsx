@@ -15,9 +15,9 @@ const Home = () => {
     <>
       <Hero imageUrl={data.entry.heroImage[0].url} imageAlt={data.entry.heroImage[0].alt} text={data.entry.heroText} />
       <section>
-            <div className="h-screen">
-              <h1 className="text-4xl text-white font-bold">Welcome to the homepage</h1>
-            </div>
+        <div>
+          <p className="text-4xl">The Company Of Landscapers - Home</p>
+        </div>
       </section>
     </>
   );
