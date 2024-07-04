@@ -7,6 +7,7 @@ export const get_homepage = gql`
           id
           title
           description
+          heroTitle
           heroText
           heroImage {
             alt

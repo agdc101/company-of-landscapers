@@ -8,6 +8,8 @@ export default {
         '9xl': '128rem',
       },
       inset: {
+        '100': '25rem',
+        '110': '30rem',
         '120': '35rem',
         '140': '45rem',
         '160': '55rem',

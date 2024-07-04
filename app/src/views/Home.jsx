@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <>
-      <Hero imageUrl={data.entry.heroImage[0].url} imageAlt={data.entry.heroImage[0].alt} text={data.entry.heroText} />
+      <Hero imageUrl={data.entry.heroImage[0].url} imageAlt={data.entry.heroImage[0].alt} title={data.entry.heroTitle} text={data.entry.heroText} />
       <section>
         <div>
           <p className="text-4xl">The Company Of Landscapers - Home</p>
