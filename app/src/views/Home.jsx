@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
-import { get_homepage } from '../queries';
+import { get_homepage } from '../utils/queries';
 import Hero from '../components/Hero';
 
 const Home = () => {

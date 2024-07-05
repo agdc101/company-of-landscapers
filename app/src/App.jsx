@@ -1,5 +1,5 @@
 import React from 'react';
-import client from './apolloClient';
+import client from './utils/apolloClient';
 import { ApolloProvider } from '@apollo/client';
 import {
   createBrowserRouter,
