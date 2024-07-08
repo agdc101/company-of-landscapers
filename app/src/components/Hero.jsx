@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import framerAnimations from "../utils/framer-anims";
 
 export default function Hero({imageUrl, imageAlt, title, text}) {
+
     return (
         <section className="bg-black hero">
             <motion.div className="overlay-content inset-0 z-10 relative px-6 lg:px-10 w-full" {...framerAnimations.slideRightFadeIn}>
