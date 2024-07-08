@@ -1,9 +1,9 @@
 const framerAnimations = {
     // Define your framer animations here
     slideDown: {
-        initial: { y: -100 },
-        animate: { y: 0 },
-        transition: { duration: 0.7, delay: 1.5 }
+        initial: { y: -100, opacity: 0 },
+        animate: { y: 0, opacity: 1 },
+        transition: { duration: 0.75, delay: 1.5 }
     },
 
     mobileNav: {
