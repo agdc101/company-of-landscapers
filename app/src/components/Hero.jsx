@@ -7,7 +7,7 @@ export default function Hero({imageUrl, imageAlt, title, text}) {
     return (
         <section className="bg-black hero">
             <motion.div {...framerAnimations.slideRightFadeIn}>
-                <div className="overlay-content inset-0 z-10 relative px-6 lg:px-10 w-full">
+                <div className="overlay-content inset-0 z-10 relative px-6 lg:px-16 w-full">
                     <div className="absolute top-40 sm:top-40 w-2/3 2xl:w-1/2" >
                         <h2 className="leading-relaxed text-white text-5xl sm:text-6xl md:text-7xl xl:text-8xl font-light tracking-wider my-6 lg:my-18">{title}</h2>
                         <p className="hidden md:block leading-relaxed text-white text-lg md:text-xl xl:text-2xl font-light tracking-wider lg:mt-12">{text}</p>

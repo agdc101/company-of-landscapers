@@ -15,8 +15,8 @@ const Nav = () => {
 
     return (
         <header className="flex justify-between content-center px-2 lg:px-4 z-30 relative text-white h-0">
-            <motion.h1 className="card-header-title z-40 text-lg lg:text-2xl lg:font-light pt-3.5" initial={{ opacity: 0 }} animate={{color: isOpen ? '#000000' : '#FFFFFF', opacity: 1 }} transition={{ delay: 0.4, duration: 1 }}>The Company Of Landscapers</motion.h1>
-            <motion.nav className="hidden md:flex justify-between pt-3" {...framerAnimations.slideDown}>
+            <motion.h1 className="card-header-title z-40 text-lg lg:text-2xl lg:font-light pt-3.5" initial={{ opacity: 0 }} animate={{color: isOpen ? '#000000' : '#FFFFFF', opacity: 1 }} transition={{ delay: 0.75, duration: 1 }}>The Company Of Landscapers</motion.h1>
+            <motion.nav className="hidden md:flex justify-between pt-3" {...framerAnimations.fadeIn}>
                 <ul className="card-header-icon md:flex text-lg font-light">
                     <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/" className="font-light">Home</NavLink></li>
                     <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/about" className="font-light">About</NavLink></li>
