@@ -1,8 +1,8 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Hamburger from 'hamburger-react';
-import { NavLink, useLocation } from "react-router-dom";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { NavLink } from "react-router-dom";
+import { motion } from "framer-motion";
 import framerAnimations from "../utils/framer-anims";
 
 const Nav = () => {
@@ -28,20 +28,18 @@ const Nav = () => {
             <div className="md:hidden relative z-50 flex justify-end m-2 ml-auto">
                 <Hamburger className="bg-red" toggled={isOpen} toggle={setOpen} color={isOpen ? 'black' : 'white'}/>
             </div>
-            <AnimatePresence>
-                {isOpen &&
-                    <nav className="md:hidden">
-                        <motion.div className="bg-white absolute top-0 left-0 right-0 bottom-0 z-30 h-screen" {...framerAnimations.mobileNav}>
-                            <ul className="card-header-icon font-light mt-24">
-                                <li className="p-7 text-3xl"><NavLink to="/" className="font-light text-black">Home</NavLink></li>
-                                <li className="p-7 text-3xl"><NavLink to="/about" className="font-light text-black">About</NavLink></li>
-                                <li className="p-7 text-3xl"><NavLink to="/our-work" className="font-light text-black">Our Work</NavLink></li>
-                                <li className="p-7 text-3xl"><NavLink to="/contact" className="font-light text-black">Contact</NavLink></li>
-                            </ul>
-                        </motion.div>
-                    </nav>
-                }
-            </AnimatePresence>
+            {isOpen &&
+                <nav className="md:hidden">
+                    <motion.div className="bg-white absolute top-0 left-0 right-0 bottom-0 z-30 h-screen" {...framerAnimations.mobileNav}>
+                        <ul className="card-header-icon font-light mt-24">
+                            <li className="p-7 text-3xl"><NavLink to="/" className="font-light text-black">Home</NavLink></li>
+                            <li className="p-7 text-3xl"><NavLink to="/about" className="font-light text-black">About</NavLink></li>
+                            <li className="p-7 text-3xl"><NavLink to="/our-work" className="font-light text-black">Our Work</NavLink></li>
+                            <li className="p-7 text-3xl"><NavLink to="/contact" className="font-light text-black">Contact</NavLink></li>
+                        </ul>
+                    </motion.div>
+                </nav>
+            }
             {/* -=-=-=-= */}
         </header>
     )
