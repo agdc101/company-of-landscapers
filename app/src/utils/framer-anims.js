@@ -3,7 +3,7 @@ const framerAnimations = {
     slideDown: {
         initial: { y: -100, opacity: 0 },
         animate: { y: 0, opacity: 1 },
-        transition: { duration: 0.75, delay: 1.5 }
+        transition: { duration: 0.75, delay: 1 }
     },
 
     mobileNav: {
@@ -16,8 +16,14 @@ const framerAnimations = {
     slideRightFadeIn: {
         initial: { x: -25, opacity: 0 },
         animate: { x: 0, opacity: 1 },
-        transition: { delay: 0.7, duration: 0.8, ease: "easeInOut" }
-    }
+        transition: { delay: 0.5, duration: 0.75, ease: "easeInOut" }
+    },
+
+    fadeIn: {
+        initial: { opacity: 0 },
+        animate: { opacity: 1 },
+        transition: { duration: 0.75 }
+    }   
 }
 
 export default framerAnimations;
