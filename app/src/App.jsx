@@ -1,20 +1,46 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/client';
 import client from './utils/apolloClient';
-import AnimationRoutes from './components/AnimationRoutes';
+import { get_homepage } from './utils/queries';
 import { AnimatePresence } from 'framer-motion';
+import Home from './views/Home';
+import About from './views/About';
+import RootLayout from './components/Layout';
 
 function App() {
-    return (
-        <ApolloProvider client={client}>
-            <BrowserRouter>
-              <AnimatePresence>
-                <AnimationRoutes />
-              </AnimatePresence>
-            </BrowserRouter>
-        </ApolloProvider>
-    );
+
+  const homeLoader = async () => {
+    try {
+      const { data } = await client.query({
+        query: get_homepage
+      });
+      return { data };
+
+    } catch (error) {
+      return { error };
+    }
+  };
+
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <RootLayout />,
+      children: [
+        { index: true, element: <Home />, loader: homeLoader},
+        { path: '/about', element: <About />},
+      ],
+    }
+  ]);
+
+  return (
+      <ApolloProvider client={client}>
+          <AnimatePresence>
+            <RouterProvider router={router} />
+          </AnimatePresence>
+      </ApolloProvider>
+  );
 }
 
 export default App;

@@ -14,6 +14,9 @@ export default {
         '140': '45rem',
         '160': '55rem',
       },
+      boxShadow: {
+        'custom': '0px 1px 10px',
+      },
     },
     screens: {
       'sm': '640px',
