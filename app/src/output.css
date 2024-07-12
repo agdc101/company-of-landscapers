@@ -700,6 +700,10 @@ video {
   align-content: center;
 }
 
+.items-center {
+  align-items: center;
+}
+
 .justify-end {
   justify-content: flex-end;
 }
@@ -1096,6 +1100,10 @@ button:focus-visible {
 @media (min-width: 1280px) {
   .xl\:block {
     display: block;
+  }
+
+  .xl\:h-20 {
+    height: 5rem;
   }
 
   .xl\:w-2\/5 {
