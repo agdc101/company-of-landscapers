@@ -5,12 +5,11 @@ import Hero from '../components/Hero';
 
 const Home = () => {
   const loaderData = useLoaderData();
-  console.log('loaderData', loaderData);
+  const { data, error, loading } = loaderData;
+  console.log(loaderData);
 
   const introTextRef = useRef(null);
   const introTextIsInView = useInView(introTextRef, { once: true });
-
-  const { data, error, loading } = loaderData;
 
   if (loading) return <p>Loading...</p>;
   if (error) return <h2 className="text-red-900 text-center mt-6 text-2xl">Error: {error.message}</h2>;

@@ -10,7 +10,7 @@ const framerAnimations = {
         initial: { x: -800 },
         animate: { x: 0 },
         exit: { x: -800 },
-        transition: { type: "tween", duration: 0.6 }
+        transition: { duration: 1 }
     },
 
     slideRightFadeIn: {

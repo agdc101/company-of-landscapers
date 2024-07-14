@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import Hamburger from 'hamburger-react';
 import { NavLink } from "react-router-dom";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import framerAnimations from "../utils/framer-anims";
 
 const Nav = () => {
@@ -19,7 +19,7 @@ const Nav = () => {
 
     return (
         <motion.header className="flex justify-between items-center pl-5 pr-2 lg:px-8 z-30 h-16 xl:h-20 fixed text-white w-full" style={{ backgroundColor: backgroundColor }}>
-            <motion.h1 className="card-header-title z-40 text-lg sm:text-xl lg:text-2xl lg:font-light" style={{ scale: titleScale }} initial={{ opacity: 0 }} animate={{color: isOpen ? '#000000' : '#FFFFFF', opacity: 1 }} transition={{ delay: 0.75, duration: 1 }}>The Company Of Landscapers</motion.h1>
+            <motion.h1 className="card-header-title z-40 text-lg sm:text-xl lg:text-2xl lg:font-light" style={{ scale: titleScale }} initial={{ opacity: 0 }} animate={{color: isOpen ? '#000000' : '#FFFFFF', opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}>The Company Of Landscapers</motion.h1>
             <motion.nav className="hidden md:flex justify-between" {...framerAnimations.fadeIn}>
                 <ul className="card-header-icon md:flex text-lg font-light">
                     <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/" className="font-light">Home</NavLink></li>
@@ -32,18 +32,20 @@ const Nav = () => {
             <div className="md:hidden relative z-50 flex justify-end m-2 ml-auto">
                 <Hamburger className="bg-red" toggled={isOpen} toggle={setOpen} color={isOpen ? 'black' : 'white'}/>
             </div>
-            {isOpen &&
-                <nav className="md:hidden">
-                    <motion.div className="bg-white absolute top-0 left-0 right-0 bottom-0 z-30 h-screen" {...framerAnimations.mobileNav}>
-                        <ul className="card-header-icon font-light mt-24">
-                            <li className="p-7 text-3xl"><NavLink to="/" className="font-light text-black">Home</NavLink></li>
-                            <li className="p-7 text-3xl"><NavLink to="/about" className="font-light text-black">About</NavLink></li>
-                            <li className="p-7 text-3xl"><NavLink to="/our-work" className="font-light text-black">Our Work</NavLink></li>
-                            <li className="p-7 text-3xl"><NavLink to="/contact" className="font-light text-black">Contact</NavLink></li>
-                        </ul>
-                    </motion.div>
-                </nav>
-            }
+            <AnimatePresence>
+                {isOpen &&
+                    <nav className="md:hidden">
+                        <motion.div className="bg-white absolute top-0 left-0 right-0 bottom-0 z-30 h-screen" {...framerAnimations.mobileNav}>
+                            <ul className="card-header-icon font-light mt-24">
+                                <li className="p-7 text-3xl"><NavLink to="/" className="font-light text-black">Home</NavLink></li>
+                                <li className="p-7 text-3xl"><NavLink to="/about" className="font-light text-black">About</NavLink></li>
+                                <li className="p-7 text-3xl"><NavLink to="/our-work" className="font-light text-black">Our Work</NavLink></li>
+                                <li className="p-7 text-3xl"><NavLink to="/contact" className="font-light text-black">Contact</NavLink></li>
+                            </ul>
+                        </motion.div>
+                    </nav>
+                }
+            </AnimatePresence>
             {/* -=-=-=-= */}
         </motion.header>
     )
