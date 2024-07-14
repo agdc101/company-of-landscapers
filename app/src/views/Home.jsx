@@ -12,7 +12,9 @@ const Home = () => {
   const introTextIsInView = useInView(introTextRef, { once: true });
 
   if (loading) return <p>Loading...</p>;
-  if (error) return <h2 className="text-red-900 text-center mt-6 text-2xl">Error: {error.message}</h2>;
+  if (error) return <Error />;
+
+  // <h2 className="text-red-900 text-center mt-6 text-2xl">Error: {error.message}</h2>
 
   return (
     <>

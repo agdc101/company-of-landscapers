@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 import Home from './views/Home';
 import About from './views/About';
 import RootLayout from './components/Layout';
+import Error from './views/Error';
 
 function App() {
 
@@ -27,8 +28,9 @@ function App() {
     {
       path: '/',
       element: <RootLayout />,
+      errorElement: <Error />,
       children: [
-        { index: true, element: <Home />, loader: homeLoader},
+        { index: true, element: <Home />, loader: homeLoader, prefetch: true},
         { path: '/about', element: <About />},
       ],
     }

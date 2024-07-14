@@ -5,9 +5,11 @@ import { NavLink } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import framerAnimations from "../utils/framer-anims";
 
-const Nav = () => {
+const Nav = (props) => {
     const [isOpen, setOpen] = useState(false);
     const { scrollY } = useScroll();
+
+    console.log(props.isMainNav);
 
     const backgroundColor = useTransform(scrollY, [0, 200], ["rgba(0, 0, 0, 0)", "rgba(84, 111, 104, 1)"]);
     const titleScale = useTransform(scrollY, [0, 100], [1, 1.075]);
@@ -18,7 +20,7 @@ const Nav = () => {
     }, [isOpen]);
 
     return (
-        <motion.header className="flex justify-between items-center pl-5 pr-2 lg:px-8 z-30 h-16 xl:h-20 fixed text-white w-full" style={{ backgroundColor: backgroundColor }}>
+        <motion.header className="flex justify-between items-center pl-5 pr-2 lg:px-8 z-30 h-16 xl:h-20 fixed text-white w-full" style={{ backgroundColor: props.isMainNav ? backgroundColor : 'rgb(84, 111, 104)' }}>
             <motion.h1 className="card-header-title z-40 text-lg sm:text-xl lg:text-2xl lg:font-light" style={{ scale: titleScale }} initial={{ opacity: 0 }} animate={{color: isOpen ? '#000000' : '#FFFFFF', opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}>The Company Of Landscapers</motion.h1>
             <motion.nav className="hidden md:flex justify-between" {...framerAnimations.fadeIn}>
                 <ul className="card-header-icon md:flex text-lg font-light">
