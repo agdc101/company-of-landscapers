@@ -2,10 +2,8 @@ import Nav from "../components/Nav";
 import Footer from "../components/Footer";
 import { Link, useRouteError } from "react-router-dom";
 
-export default function Error() {
+const Error = () => {
     const error = useRouteError();
-
-    console.log(error);
 
     return (
         <div className="mx-auto flex flex-col min-h-svh">
@@ -19,3 +17,5 @@ export default function Error() {
         </div>
     );
 }
+
+export default Error;

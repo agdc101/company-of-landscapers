@@ -2,6 +2,7 @@ import { useRef } from "react";
 import { useLoaderData } from 'react-router-dom';
 import { useInView } from "framer-motion";
 import Hero from '../components/Hero';
+import Nav from '../components/Nav';
 
 const Home = () => {
   const loaderData = useLoaderData();
@@ -11,10 +12,8 @@ const Home = () => {
   const introTextRef = useRef(null);
   const introTextIsInView = useInView(introTextRef, { once: true });
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <Error />;
-
-  // <h2 className="text-red-900 text-center mt-6 text-2xl">Error: {error.message}</h2>
+  if (loading) return <><Nav/><h3 className="text-center mt-32 text-2xl">Loading...</h3></>;
+  if (error) return ( <><Nav/><h2 className="text-red-900 text-center mt-32 text-2xl">Error: {error.message}</h2></>); //change error message to something generic on production
 
   return (
     <>
