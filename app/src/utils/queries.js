@@ -2,7 +2,7 @@ import { gql } from '@apollo/client';
 
 export const get_homepage = gql`
     query getHomepage {
-      entry {
+      homeEntries {
         ... on home_Entry {
           id
           title

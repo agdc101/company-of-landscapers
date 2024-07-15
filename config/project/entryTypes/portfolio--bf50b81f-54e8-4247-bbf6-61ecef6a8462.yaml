@@ -42,7 +42,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 89e3c548-5305-40dc-8eae-27f6fce559a7
@@ -57,7 +57,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 5d9183a0-75c7-4d81-9bf9-1529e40937e6
@@ -79,21 +79,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 50
-          -
-            elementCondition: null
-            fieldUid: 6d6d30ea-3be2-411e-ae32-b53bce8c7ff5 # Phone Number
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 4df5d378-aa05-44a0-bb79-a6ebb91387ae
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: c4254ddb-35e7-4c94-b044-465b1329f0d6
         userCondition: null
