@@ -1,4 +1,4 @@
-dateModified: 1721030662
+dateModified: 1721060963
 email:
   fromEmail: agdc101@gmail.com
   fromName: company-of-landscapers
@@ -17,10 +17,15 @@ meta:
     5ba59a8e-8f7d-4263-8953-9ecb6b08e60d: about # about
     6d6d30ea-3be2-411e-ae32-b53bce8c7ff5: 'Phone Number' # Phone Number
     8f75fe13-3a1f-44e6-a18d-1130662e3782: 'Portfolio Types' # Portfolio Types
+    9cbc0be7-2e25-41b0-8cbe-798aa8e3a380: 'Experience Description' # Experience Description
+    45d83c52-358c-4eb0-a0bf-a98df87151bd: 'Intro Description' # Intro Description
     102e3dff-3159-462b-a2ee-18957798f6d7: company-of-landscapers # company-of-landscapers
     1501e96a-99b5-4803-8e1b-35d30f7ef800: 'Social Link' # Social Link
+    4628a1f0-6346-446d-ae6b-0516f4466cbc: 'Experience Title' # Experience Title
     4979a5b7-ce59-477e-92d9-70531382c552: Address # Address
     5212e7c6-8d20-4c54-9720-1d3464693fb8: 'Street Address' # Street Address
+    65032f45-2139-461d-a905-0e01e328d598: 'Intro Image' # Intro Image
+    915857dd-f635-4a43-ac1d-b56aade82396: 'Intro Title' # Intro Title
     94829161-2dd5-4e9b-afd5-bd800f248757: home # home
     a020d92f-e1bd-41f9-ab8e-28581deb0902: Home # Home
     a7b1de76-4c29-4448-b3f9-ee346e9c8ecd: Portfolio # Portfolio
@@ -33,6 +38,7 @@ meta:
     c0d38d04-1dae-4f65-ab4e-3569841f48c6: 'Hero Title' # Hero Title
     ca6860b8-46dc-4946-816c-8951d3c6e415: 'Public Schema' # Public Schema
     ce74db51-2699-4917-8734-9769c5df7ceb: 'Hero Text' # Hero Text
+    d6fae4f2-b9a8-4131-b09d-4e457c4d77fc: 'Experience Image' # Experience Image
     dbc74a67-01ff-43f5-aff7-130a4a88b827: 'Portfolio Image' # Portfolio Image
     e85ddff0-4029-4929-a287-92eaf0c83603: 'Contact Information' # Contact Information
     f26d5401-bbcb-4d6d-9285-01a9e394ebae: Types # Types

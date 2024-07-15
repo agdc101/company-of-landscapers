@@ -4,12 +4,21 @@ export const get_homepage = gql`
     query getHomepage {
       homeEntries {
         ... on home_Entry {
-          id
-          title
-          description
           heroTitle
           heroText
           heroImage {
+            alt
+            url
+          }
+          introTitle
+          introDescription
+          introImage {
+            alt
+            url
+          }
+          experienceTitle
+          experienceDescription
+          experienceImage {
             alt
             url
           }
