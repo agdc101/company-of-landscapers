@@ -1,4 +1,4 @@
-dateModified: 1721060963
+dateModified: 1721118518
 email:
   fromEmail: agdc101@gmail.com
   fromName: company-of-landscapers
@@ -14,6 +14,7 @@ fs:
 meta:
   __names__:
     4a535fdc-5034-43ae-bbff-b5d1b8b0ec27: company-of-landscapers # company-of-landscapers
+    4ff36937-2014-455b-98f6-2f4e01565bac: 'featured projects' # featured projects
     5ba59a8e-8f7d-4263-8953-9ecb6b08e60d: about # about
     6d6d30ea-3be2-411e-ae32-b53bce8c7ff5: 'Phone Number' # Phone Number
     8f75fe13-3a1f-44e6-a18d-1130662e3782: 'Portfolio Types' # Portfolio Types
@@ -36,6 +37,7 @@ meta:
     bef872f0-be53-4c18-a75b-17c7ab9ea4b4: Email # Email
     bf50b81f-54e8-4247-bbf6-61ecef6a8462: portfolio # portfolio
     c0d38d04-1dae-4f65-ab4e-3569841f48c6: 'Hero Title' # Hero Title
+    c11a8676-8d68-4a9f-aaeb-c653dd6917bf: 'Featured Projects' # Featured Projects
     ca6860b8-46dc-4946-816c-8951d3c6e415: 'Public Schema' # Public Schema
     ce74db51-2699-4917-8734-9769c5df7ceb: 'Hero Text' # Hero Text
     d6fae4f2-b9a8-4131-b09d-4e457c4d77fc: 'Experience Image' # Experience Image

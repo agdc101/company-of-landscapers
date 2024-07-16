@@ -1,38 +1,54 @@
 import { gql } from '@apollo/client';
 
 export const get_homepage = gql`
-    query getHomepage {
-      homeEntries {
-        ... on home_Entry {
-          heroTitle
-          heroText
-          heroImage {
-            alt
-            url
-          }
-          introTitle
-          introDescription
-          introImage {
-            alt
-            url
-          }
-          experienceTitle
-          experienceDescription
-          experienceImage {
-            alt
-            url
+  query getHomepage {
+    homeEntries {
+      ... on home_Entry {
+        heroTitle
+        heroText
+        heroImage {
+          alt
+          url
+        }
+        introTitle
+        introDescription
+        introImage {
+          alt
+          url
+        }
+        experienceTitle
+        experienceDescription
+        experienceImage {
+          alt
+          url
+        }
+        featuredProjects {
+          ... on featuredProjects_Entry {
+            title
+            description
+            portfolioImage {
+              alt
+              url
+            }
           }
         }
       }
     }
-`;
+  }`;
 
-// export const get_aboutpage = gql`
-//     query GetAboutpage {
-//       aboutEntries {
-//         ... on about_Entry {
-//           description
+// export const get_portfolio = gql`
+//   query getPortfolio {
+//     portfolioEntries {
+//       ... on portfolio_Entry {
+//         title
+//         description
+//         portfolioImage {
+//           alt
+//           url
+//         }
+//         portfolioTypes {
+//           title
 //         }
 //       }
 //     }
-// `;
+//   }`;

@@ -3,6 +3,13 @@ import { useLoaderData } from 'react-router-dom';
 import { useInView } from "framer-motion";
 import Hero from '../components/Hero';
 import Nav from '../components/Nav';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 const Home = () => {
   const loaderData = useLoaderData();
@@ -49,21 +56,22 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="justify-around py-20 px-2 xl:px-10 bg-stone-800">
-          <h4 className="text-4xl text-center mb-16 text-white">Latest Projects</h4>
+      <section className="justify-around py-20 px-32 xl:px-10 bg-stone-800">
+          <h4 className="text-4xl text-center mb-10 text-white">Featured Projects</h4>
           <div className="flex flex-col justify-evenly items-center">
-            <div className="mb-12">
-              <p className="text-2xl mb-4 text-white">Project 1</p>
-              <img src="https://via.placeholder.com/400" alt="placeholder" />
-            </div>
-            <div className="mb-12">
-              <p className="text-2xl mb-4 text-white">Project 2</p>
-              <img src="https://via.placeholder.com/400" alt="placeholder" />
-            </div>
-            <div className="mb-12">
-              <p className="text-2xl mb-4 text-white">Project 3</p>
-              <img src="https://via.placeholder.com/400" alt="placeholder" />
-            </div>
+            <Carousel opts={{align: "start" }} className="">
+              <CarouselContent>
+                {homePage.featuredProjects.map((project, index) => (
+                  <CarouselItem key={index} className="flex flex-col items-center ">
+                    <h4 className="text-2xl text-white mt-5">{project.title}</h4>
+                    <p className="text-white my-5">{project.description}</p>
+                    <img className="rounded shadow-custom" src={project.portfolioImage[0].url} alt={project.portfolioImage[0].alt} />
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious/>
+              <CarouselNext />
+            </Carousel>
           </div>
       </section>
 
