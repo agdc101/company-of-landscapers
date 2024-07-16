@@ -69,7 +69,7 @@ const Home = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious/>
+              <CarouselPrevious />
               <CarouselNext />
             </Carousel>
           </div>
