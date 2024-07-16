@@ -1343,6 +1343,10 @@ a:hover {
     margin-top: 3rem;
   }
 
+  .md\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -1440,6 +1444,14 @@ a:hover {
 }
 
 @media (min-width: 1280px) {
+  .xl\:mb-14 {
+    margin-bottom: 3.5rem;
+  }
+
+  .xl\:mb-16 {
+    margin-bottom: 4rem;
+  }
+
   .xl\:block {
     display: block;
   }

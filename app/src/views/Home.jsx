@@ -11,6 +11,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button";
+import Introduction from "../components/Introduction";
 
 const Home = () => {
   const loaderData = useLoaderData();
@@ -18,9 +19,7 @@ const Home = () => {
   const homePage = data.homeEntries[0];
   console.log(loaderData);
 
-  const introTextRef = useRef(null);
   const expTextRef = useRef(null);
-  const introTextIsInView = useInView(introTextRef, { once: true });
   const expTextIsInView = useInView(expTextRef, { once: true });
 
   if (loading) return <><Nav/><h3 className="text-center mt-32 text-2xl">Loading...</h3></>;
@@ -29,19 +28,8 @@ const Home = () => {
   return (
     <>
       <Hero imageUrl={homePage.heroImage[0].url} imageAlt={homePage.heroImage[0].alt} title={homePage.heroTitle} text={homePage.heroText} />
-      <section className="flex flex-col items-center xl:flex-row justify-around py-20 px-2 xl:px-10">
-        <div ref={introTextRef} className="text-center w-full lg:w-4/5 xl:w-2/5" style={{
-            transform: introTextIsInView ? "none" : "translateX(-100px)",
-            opacity: introTextIsInView ? 1 : 0,
-            transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-          }}>
-          <h4 className="text-4xl">{homePage.introTitle}</h4>
-          <p className="my-14 text-xl xl:text-2xl 2xl:text-3xl">{homePage.introDescription}</p>
-        </div>
-        <div className="xl:block w-4/5 sm:w-3/5 md:w-2/5 max-w-screen-md">
-          <img className="rounded shadow-custom" src={homePage.introImage[0].url} alt={homePage.introImage[0].alt} />
-        </div>
-      </section>
+
+      <Introduction homePage={homePage} />
 
       <section className="flex flex-col items-center xl:flex-row-reverse justify-around py-20 px-2 xl:px-10 bg-slate-200">
         <div ref={expTextRef} className="text-center w-full lg:w-4/5 xl:w-2/5" style={{
@@ -58,7 +46,7 @@ const Home = () => {
       </section>
 
       <section className="justify-around py-20 px-14 md:px-20 lg:px-32 xl:px-18 bg-neutral-800">
-          <h4 className="text-4xl text-center mb-12 text-white">Featured Projects</h4>
+          <h4 className="text-4xl text-center mb-12 md:mb-16 text-white">Featured Projects</h4>
           <div className="flex flex-col justify-evenly text-center items-center">
             <Carousel opts={{align: "start" }} className="">
               <CarouselContent>

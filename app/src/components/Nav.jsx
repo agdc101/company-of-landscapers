@@ -10,7 +10,7 @@ const Nav = (props) => {
     const { scrollY } = useScroll();
 
     const backgroundColor = useTransform(scrollY, [0, 200], ["rgba(0, 0, 0, 0)", "rgba(84, 111, 104, 1)"]);
-    const titleScale = useTransform(scrollY, [0, 100], [1, 1.075]);
+    const titleScale = useTransform(scrollY, [0, 100], [1, 1.065]);
 
     //disable scrolling when mobile nav is open
     useEffect(() => {
