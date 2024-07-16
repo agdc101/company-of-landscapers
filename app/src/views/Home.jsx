@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { useInView } from "framer-motion";
 import Hero from '../components/Hero';
 import Nav from '../components/Nav';
@@ -10,6 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Button } from "@/components/ui/button";
 
 const Home = () => {
   const loaderData = useLoaderData();
@@ -37,7 +38,7 @@ const Home = () => {
           <h4 className="text-4xl">{homePage.introTitle}</h4>
           <p className="my-14 text-xl xl:text-2xl 2xl:text-3xl">{homePage.introDescription}</p>
         </div>
-        <div className="xl:block w-2/5 max-w-screen-md">
+        <div className="xl:block w-4/5 sm:w-3/5 md:w-2/5 max-w-screen-md">
           <img className="rounded shadow-custom" src={homePage.introImage[0].url} alt={homePage.introImage[0].alt} />
         </div>
       </section>
@@ -51,21 +52,21 @@ const Home = () => {
           <h4 className="text-4xl">{homePage.experienceTitle}</h4>
           <p className="my-14 text-xl xl:text-2xl 2xl:text-3xl">{homePage.experienceDescription}</p>
         </div>
-        <div className="xl:block w-2/5 max-w-screen-md">
+        <div className="xl:block w-4/5 sm:w-3/5 md:w-2/5 max-w-screen-md">
           <img className="rounded shadow-custom" src={homePage.experienceImage[0].url} alt={homePage.experienceImage[0].alt} />
         </div>
       </section>
 
-      <section className="justify-around py-20 px-32 xl:px-10 bg-stone-800">
-          <h4 className="text-4xl text-center mb-10 text-white">Featured Projects</h4>
-          <div className="flex flex-col justify-evenly items-center">
+      <section className="justify-around py-20 px-14 md:px-20 lg:px-32 xl:px-18 bg-neutral-800">
+          <h4 className="text-4xl text-center mb-12 text-white">Featured Projects</h4>
+          <div className="flex flex-col justify-evenly text-center items-center">
             <Carousel opts={{align: "start" }} className="">
               <CarouselContent>
                 {homePage.featuredProjects.map((project, index) => (
-                  <CarouselItem key={index} className="flex flex-col items-center ">
+                  <CarouselItem key={index} className="flex flex-col justify-between items-center px-6 xl:px-8 md:basis-1/2 xl:basis-1/3">
                     <h4 className="text-2xl text-white mt-5">{project.title}</h4>
-                    <p className="text-white my-5">{project.description}</p>
-                    <img className="rounded shadow-custom" src={project.portfolioImage[0].url} alt={project.portfolioImage[0].alt} />
+                    <p className="text-white my-5 md:my-8">{project.description}</p>
+                    <img className="rounded shadow-custom md:w-full" src={project.portfolioImage[0].url} alt={project.portfolioImage[0].alt} />
                   </CarouselItem>
                 ))}
               </CarouselContent>
@@ -73,6 +74,7 @@ const Home = () => {
               <CarouselNext />
             </Carousel>
           </div>
+          <Link to="/our-work" className="mt-14 border block text-center rounded py-2 w-2/6 lg:w-1/6 m-auto text-white">See more projects</Link>
       </section>
 
     </>

@@ -83,6 +83,16 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-family: "Playwrite NO", cursive;
+}
+a {
+  transition: color 0.2s;
+}
+a:hover {
+  color: rgb(142, 147, 154);
+}
+
 .hero-image-container::before {
   content: "";
   position: absolute;

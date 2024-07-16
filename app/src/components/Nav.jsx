@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import Hamburger from 'hamburger-react';
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import framerAnimations from "../utils/framer-anims";
 
@@ -18,8 +18,8 @@ const Nav = (props) => {
     }, [isOpen]);
 
     return (
-        <motion.header className="flex justify-between items-center pl-5 pr-2 lg:px-8 z-30 h-16 xl:h-20 fixed text-white w-full" style={{ backgroundColor: props.isMainNav ? backgroundColor : 'rgb(84, 111, 104)' }}>
-            <motion.h1 className="card-header-title z-40 text-lg sm:text-xl lg:text-2xl lg:font-light" style={{ scale: titleScale }} initial={{ opacity: 0 }} animate={{color: isOpen ? '#000000' : '#FFFFFF', opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}>The Company Of Landscapers</motion.h1>
+        <motion.header className="flex justify-between items-center pl-4 pr-2 md:pl-6 lg:px-8 z-30 h-16 xl:h-20 fixed text-white w-full" style={{ backgroundColor: props.isMainNav ? backgroundColor : 'rgb(84, 111, 104)' }}>
+            <Link to="/"><motion.h1 className="card-header-title z-40 sm:text-lg lg:text-2xl lg:font-light" style={{ scale: titleScale }} initial={{ opacity: 0 }} animate={{color: isOpen ? '#000000' : '#FFFFFF', opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}>The Company Of Landscapers</motion.h1></Link>
             <motion.nav className="hidden md:flex justify-between" {...framerAnimations.fadeIn}>
                 <ul className="card-header-icon md:flex text-lg font-light">
                     <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/" className="font-light">Home</NavLink></li>
