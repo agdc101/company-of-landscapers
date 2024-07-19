@@ -17,13 +17,9 @@ const Home = () => {
   return (
     <>
       <Hero imageUrl={homePage.heroImage[0].url} imageAlt={homePage.heroImage[0].alt} title={homePage.heroTitle} text={homePage.heroText} />
-
       <Introduction homePage={homePage} />
-
       <Experience homePage={homePage} />
-
       <FeaturedProjects homePage={homePage} />
-
     </>
   );
 }
