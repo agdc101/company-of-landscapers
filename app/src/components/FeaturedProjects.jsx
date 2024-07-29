@@ -49,7 +49,7 @@ export default function FeaturedProjects({homePage}) {
                     <CarouselNext />
                 </Carousel>
             </div>
-            <Link to="/our-work" className="mt-14 border block text-center rounded py-2 w-2/6 lg:w-1/6 m-auto text-white">See more projects</Link>
+            <Link to="/our-work" className="mt-14 border block text-center rounded py-2 w-2/6 lg:w-1/6 m-auto text-white">View our work</Link>
         </section>
     )
 
