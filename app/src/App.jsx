@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/client';
 import client from './utils/apolloClient';
-import { get_homepage } from './utils/queries';
+import { get_homepage, get_portfolio } from './utils/queries';
 import { AnimatePresence } from 'framer-motion';
 import Home from './views/Home';
 import About from './views/About';
@@ -12,12 +12,17 @@ import Error from './views/Error';
 
 function App() {
 
-  const homeLoader = async () => {
+  const homePageLoader = async () => {
     try {
-      const { data } = await client.query({
-        query: get_homepage
-      });
-      return { data };
+      const [homepageData, portfolioData] = await Promise.all([
+        client.query({ query: get_homepage }),
+        client.query({ query: get_portfolio }),
+      ]);
+
+    return {
+      homepageData: homepageData.data,
+      portfolioData: portfolioData.data,
+    };
 
     } catch (error) {
       return { error };
@@ -30,18 +35,18 @@ function App() {
       element: <RootLayout />,
       errorElement: <Error />,
       children: [
-        { index: true, element: <Home />, loader: homeLoader, prefetch: true},
+        { index: true, element: <Home />, loader: homePageLoader, prefetch: true},
         { path: '/about', element: <About />},
       ],
     }
   ]);
 
   return (
-      <ApolloProvider client={client}>
-          <AnimatePresence>
-            <RouterProvider router={router} />
-          </AnimatePresence>
-      </ApolloProvider>
+    <ApolloProvider client={client}>
+      <AnimatePresence>
+        <RouterProvider router={router} />
+      </AnimatePresence>
+    </ApolloProvider>
   );
 }
 

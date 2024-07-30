@@ -22,33 +22,16 @@ export const get_homepage = gql`
           alt
           url
         }
-        featuredProjects {
-          ... on featuredProjects_Entry {
-            title
-            description
-            portfolioImage {
-              alt
-              url
-            }
-          }
-        }
       }
     }
   }`;
 
-// export const get_portfolio = gql`
-//   query getPortfolio {
-//     portfolioEntries {
-//       ... on portfolio_Entry {
-//         title
-//         description
-//         portfolioImage {
-//           alt
-//           url
-//         }
-//         portfolioTypes {
-//           title
-//         }
-//       }
-//     }
-//   }`;
+export const get_portfolio = gql`
+  query getPortfolio {
+    portfolioEntries {
+      ... on portfolio_Entry {
+        title
+        description
+      }
+    }
+  }`;
