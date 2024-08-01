@@ -14,20 +14,18 @@ function App() {
 
   const homePageLoader = async () => {
     try {
-      const [homepageData, portfolioData] = await Promise.all([
-        client.query({ query: get_homepage }),
-        client.query({ query: get_portfolio }),
-      ]);
-
-    return {
-      homepageData: homepageData.data,
-      portfolioData: portfolioData.data,
-    };
-
+      const homepageData = await client.query({ query: get_homepage });
+      const portfolioData = await client.query({ query: get_portfolio });
+  
+      return {
+        homepageData: homepageData.data,
+        portfolioData: portfolioData.data,
+      };
     } catch (error) {
       return { error };
     }
   };
+  
 
   const router = createBrowserRouter([
     {
