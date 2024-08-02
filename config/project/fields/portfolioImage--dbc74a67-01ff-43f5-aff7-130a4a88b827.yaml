@@ -1,7 +1,7 @@
 columnSuffix: null
 handle: portfolioImage
 instructions: null
-name: 'Portfolio Image'
+name: 'Portfolio Images'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -14,8 +14,8 @@ settings:
   defaultUploadLocationSubpath: null
   localizeRelations: false
   maintainHierarchy: false
-  maxRelations: 1
-  minRelations: null
+  maxRelations: 20
+  minRelations: 1
   previewMode: full
   restrictFiles: true
   restrictLocation: true

@@ -51,7 +51,12 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: dbc74a67-01ff-43f5-aff7-130a4a88b827 # Portfolio Image
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 1c9b8e15-ec0f-4ef3-bc89-e9af4865c878
+            userCondition: null
+          -
+            elementCondition: null
+            fieldUid: dbc74a67-01ff-43f5-aff7-130a4a88b827 # Portfolio Images
             handle: null
             includeInCards: false
             instructions: null
@@ -63,7 +68,12 @@ fieldLayouts:
             uid: 5d9183a0-75c7-4d81-9bf9-1529e40937e6
             userCondition: null
             warning: null
-            width: 50
+            width: 100
+          -
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 295faf08-4a0a-44e1-8b99-66c298104481
+            userCondition: null
           -
             elementCondition: null
             fieldUid: 8f75fe13-3a1f-44e6-a18d-1130662e3782 # Portfolio Types
@@ -78,7 +88,7 @@ fieldLayouts:
             uid: 4bad8162-43cc-4096-9f6f-70b658635a82
             userCondition: null
             warning: null
-            width: 50
+            width: 25
         name: Content
         uid: c4254ddb-35e7-4c94-b044-465b1329f0d6
         userCondition: null

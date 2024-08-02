@@ -51,7 +51,7 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
-            fieldUid: dbc74a67-01ff-43f5-aff7-130a4a88b827 # Portfolio Image
+            fieldUid: dbc74a67-01ff-43f5-aff7-130a4a88b827 # Portfolio Images
             handle: null
             includeInCards: false
             instructions: null

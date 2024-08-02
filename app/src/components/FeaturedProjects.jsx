@@ -9,12 +9,14 @@ import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
 
-export default function FeaturedProjects({homePage}) {
+export default function FeaturedProjects({portfolioData}) {
     const featProjects = useRef(null);
     const featProjectsTitle = useRef(null);
 
     const featProjectsIsInView = useInView(featProjects, { once: true });
     const featProjectsTitleIsInView = useInView(featProjects, { once: true });
+
+    console.log(portfolioData);
 
     return (
         <section className="justify-around py-20 px-14 md:px-20 lg:px-32 xl:px-18 bg-neutral-800">
@@ -36,13 +38,14 @@ export default function FeaturedProjects({homePage}) {
                         transition: "all 0.75s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s"
                     }}>
                         <CarouselContent>
-                        {/* {homePage.featuredProjects.map((project, index) => (
+                        {portfolioData.portfolioEntries.map((project, index) => (
                             <CarouselItem key={index} className="flex flex-col justify-between items-center px-6 xl:px-8 md:basis-1/2 xl:basis-1/3">
                                 <h4 className="text-2xl text-white mt-5">{project.title}</h4>
                                 <p className="text-white my-5 md:my-8">{project.description}</p>
                                 <img className="rounded shadow-custom md:w-full" src={project.portfolioImage[0].url} alt={project.portfolioImage[0].alt} />
+                                <Link to={`/portfolio/${project.slug}`} className="mt-5 border block text-center rounded py-2 w-2/6 lg:w-1/6 m-auto text-white">View project</Link>
                             </CarouselItem>
-                        ))} */}
+                        ))}
                         </CarouselContent>
                     </motion.div>
                     <CarouselPrevious />

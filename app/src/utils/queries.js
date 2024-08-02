@@ -30,8 +30,16 @@ export const get_portfolio = gql`
   query getPortfolio {
     portfolioEntries {
       ... on portfolio_Entry {
+        id
         title
         description
+        slug
+        portfolioImage {
+          id
+          url
+          alt
+          img
+        }
       }
     }
   }`;
