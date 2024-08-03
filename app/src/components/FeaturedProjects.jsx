@@ -5,6 +5,7 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Card, CardContent } from "@/components/ui/card"
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
@@ -19,10 +20,10 @@ export default function FeaturedProjects({portfolioData}) {
     console.log(portfolioData);
 
     return (
-        <section className="justify-around py-20 px-14 md:px-20 lg:px-32 xl:px-18 bg-neutral-800">
+        <section className="justify-around py-20 px-14 lg:px-16 xl:px-18 bg-[#fdf1e8]">
             <motion.h4 
                 ref={featProjectsTitle}
-                className="text-4xl text-center mb-12 md:mb-16 text-white" 
+                className="text-4xl text-center mb-12 md:mb-16" 
                 style={{
                     opacity: featProjectsTitleIsInView ? 1 : 0,
                     transition: "all 1s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s"
@@ -39,11 +40,17 @@ export default function FeaturedProjects({portfolioData}) {
                     }}>
                         <CarouselContent>
                         {portfolioData.portfolioEntries.map((project, index) => (
-                            <CarouselItem key={index} className="flex flex-col justify-between items-center px-6 xl:px-8 md:basis-1/2 xl:basis-1/3">
-                                <h4 className="text-2xl text-white mt-5">{project.title}</h4>
-                                <p className="text-white my-5 md:my-8">{project.description}</p>
-                                <img className="rounded shadow-custom md:w-full" src={project.portfolioImage[0].url} alt={project.portfolioImage[0].alt} />
-                                <Link to={`/portfolio/${project.slug}`} className="mt-5 border block text-center rounded py-2 w-2/6 lg:w-1/6 m-auto text-white">View project</Link>
+                            <CarouselItem key={index} className="md:basis-1/2 xl:basis-1/3">
+                                <Card>
+                                    <CardContent>
+                                        <h4 className="text-2xl mt-5">{project.title}</h4>
+                                        <p className="my-5 md:my-8">{project.description}</p>
+                                        <Link to={`/portfolio/${project.slug}`}>
+                                            <img className="rounded shadow-custom mx-auto" src={project.portfolioImage[0].url} alt={project.portfolioImage[0].alt} />
+                                        </Link>
+                                    </CardContent>
+                                </Card>
+                                {/* <Link to={`/portfolio/${project.slug}`} className="mt-3 border text-xs italic block text-center rounded py-2 w-2/6 lg:w-3/6 m-auto text-white">View project</Link> */}
                             </CarouselItem>
                         ))}
                         </CarouselContent>
@@ -52,7 +59,7 @@ export default function FeaturedProjects({portfolioData}) {
                     <CarouselNext />
                 </Carousel>
             </div>
-            <Link to="/our-work" className="mt-14 border block text-center rounded py-2 w-2/6 lg:w-1/6 m-auto text-white">View our work</Link>
+            <Link to="/our-work" className="mt-14 border block text-center rounded py-2 w-2/6 m-auto text-white">View all our work</Link>
         </section>
     )
 
