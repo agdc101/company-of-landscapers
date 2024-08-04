@@ -1,27 +1,33 @@
 
-import { useQuery } from '@apollo/client';
-import { useParams } from "react-router-dom";
-import { get_portfolio } from '@/utils/queries';
+import { useParams, useLoaderData } from "react-router-dom";
+import Hero from "@/components/Hero";
 
 export default function Portfolio() {
 
-    const params = useParams();
+  const loaderData = useLoaderData();
+  const { portfolioData, error, loading } = loaderData;
 
-    console.log('params:', params.slug);
+  const params = useParams();
+  console.log('params:', params.slug);
+  console.log('portfolioData:', portfolioData.portfolioEntries);
 
-    // if (loading) return <p>Loading...</p>;
-    // if (error) return <p>Error: {error.message}</p>;
-  
-    return (
-      <div>
-        <h1>Portfolio</h1>
-        {/* {data.entries.map((post, index) => (
-          <div key={index}>
-            <h2>{post.title}</h2>
-            <p>{post.slug}</p>
-            <p>{post.description}</p>
-          </div>
-        ))} */}
-      </div>
-    );
+  // in portfolioData.portfolioEntries find the entry with the slug that matches params.slug
+  const entry = portfolioData.portfolioEntries.find(entry => entry.slug === params.slug);
+
+  console.log('entry:', entry);
+
+
+  if (loading) return <p>Loading...</p>;
+  if (error) return <p>Error: {error.message}</p>;
+
+  return (
+    <>
+      <Hero imageUrl={entry.portfolioImage[0].url} imageAlt={entry.portfolioImage[0].alt} title={entry.title} text={entry.description} />
+      <h1>Portfolio</h1>
+        <div>
+          <h2>{entry.title}</h2>
+          <p>{entry.description}</p>
+        </div>
+    </>
+  );
 }

@@ -26,6 +26,18 @@ function App() {
       return { error };
     }
   };
+
+  const portfolioPageLoader = async () => {
+    try {
+      const portfolioData = await client.query({ query: get_portfolio });
+  
+      return {
+        portfolioData: portfolioData.data,
+      };
+    } catch (error) {
+      return { error };
+    }
+  }
   
 
   const router = createBrowserRouter([
@@ -47,6 +59,7 @@ function App() {
         { 
           path: '/portfolio/:slug',
           element: <Portfolio />, 
+          loader: portfolioPageLoader,
         },
       ],
     }

@@ -48,9 +48,9 @@ export default function FeaturedProjects({portfolioData}) {
                                         <Link to={`/portfolio/${project.slug}`}>
                                             <img className="rounded shadow-custom mx-auto" src={project.portfolioImage[0].url} alt={project.portfolioImage[0].alt} />
                                         </Link>
+                                        <Link to={`/portfolio/${project.slug}`} className="mt-5 border italic block text-center rounded py-2 w-2/6 lg:w-3/6 m-auto">View project</Link>
                                     </CardContent>
                                 </Card>
-                                {/* <Link to={`/portfolio/${project.slug}`} className="mt-3 border text-xs italic block text-center rounded py-2 w-2/6 lg:w-3/6 m-auto text-white">View project</Link> */}
                             </CarouselItem>
                         ))}
                         </CarouselContent>
@@ -59,7 +59,7 @@ export default function FeaturedProjects({portfolioData}) {
                     <CarouselNext />
                 </Carousel>
             </div>
-            <Link to="/our-work" className="mt-14 border block text-center rounded py-2 w-2/6 m-auto text-white">View all our work</Link>
+            <Link to="/our-work" className="mt-14 border border-gray-400 block text-center rounded py-2 w-1/6 m-auto">View all our work</Link>
         </section>
     )
 
