@@ -23,7 +23,7 @@ const Nav = (props) => {
             <motion.nav className="hidden md:flex justify-between" {...framerAnimations.fadeIn}>
                 <ul className="card-header-icon md:flex text-lg font-light">
                     <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/" className="font-light">Home</NavLink></li>
-                    <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/our-work" className="font-light">Our Work</NavLink></li>
+                    <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/portfolio" className="font-light">Our Work</NavLink></li>
                     <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/contact" className="font-light">Contact</NavLink></li>
                 </ul>
             </motion.nav>

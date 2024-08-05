@@ -9,6 +9,7 @@ import Home from './views/Home';
 import About from './views/About';
 import RootLayout from './components/Layout';
 import Error from './views/Error';
+import PortfolioEntry from './views/PortfolioEntry';
 import Portfolio from './views/Portfolio';
 
 function App() {
@@ -53,14 +54,20 @@ function App() {
           prefetch: true
         },
         { 
-          path: '/about', 
-          element: <About />
-        },
-        { 
-          path: '/portfolio/:slug',
-          element: <Portfolio />, 
-          loader: portfolioPageLoader,
-        },
+          path: 'portfolio',
+          children: [
+            {
+              index: true,
+              element: <Portfolio />,
+              loader: portfolioPageLoader,
+            },
+            {
+              path: ':slug', 
+              element: <PortfolioEntry/>,
+              loader: portfolioPageLoader,
+            }
+          ]
+        }
       ],
     }
   ]);
