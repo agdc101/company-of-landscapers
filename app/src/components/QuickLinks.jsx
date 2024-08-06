@@ -1,32 +1,39 @@
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 
-export default function QuickLinks({homePage}) {
+export default function QuickLinks({globalData}) {
+
+    console.log(globalData);
+    const latestProjects = globalData.entries;
+    const email = globalData.globalSet.email;
+    const number = globalData.globalSet.phoneNumber;
+    const address = globalData.globalSet.streetAddress;
+
     return (
-        <section className="quicklinks">
-            <div>
-                <div>
-                    <h3>Quicklinks</h3>
+        <section className="quicklinks bg-[#333333] text-white py-8 xl:py-12 px-2 xl:px-6">
+            <div className="flex flex-col justify-center pl-8">
+                <div className="my-4">
+                    <h3 className="text-xl mb-2 font-semibold">Quicklinks</h3>
                     <ul>
-                        <li><Link href="#introduction">Introduction</Link></li>
-                        <li><Link href="#experience">Experience</Link></li>
-                        <li><Link href="#featured-projects">Featured Projects</Link></li>
+                        <li><Link className="font-light" to="/">Home</Link></li>
+                        <li><Link to="/portfolio">Our Work</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>
-                <div>
-                    <h3>Latest Projects</h3>
+                <div className="my-4">
+                    <h3 className="text-xl mb-2 font-semibold">Latest Projects</h3>
                     <ul>
-                        <li><Link href="#introduction">Introduction</Link></li>
-                        <li><Link href="#experience">Experience</Link></li>
-                        <li><Link href="#featured-projects">Featured Projects</Link></li>
+                        {latestProjects.map((project, index) => (
+                            <li key={index}><Link to={`/portfolio/${project.slug}`}>{project.title}</Link></li>
+                        ))}
                     </ul>
                 </div>
-                <div>
-                    <h3>Contact us</h3>
+                <div className="my-4">
+                    <h3 className="text-xl mb-2 font-semibold">Contact us</h3>
                     <ul>
-                        <li><Link href="#introduction">Introduction</Link></li>
-                        <li><Link href="#experience">Experience</Link></li>
-                        <li><Link href="#featured-projects">Featured Projects</Link></li>
+                        {address && <li>{address}</li>}
+                        {email && <li>{email}</li>}
+                        {number && <li>{number}</li>}
                     </ul>
                 </div>
             </div>

@@ -12,6 +12,8 @@ const Home = () => {
   const homePage = homepageData.homeEntries[0];
   const featuredProjectsData = homepageData.entries;
 
+  console.log(homepageData);
+
   if (loading) return <><Nav/><h3 className="text-center mt-32 text-2xl">Loading...</h3></>;
   if (error) return ( <><Nav/><h2 className="text-red-900 text-center mt-32 text-2xl">Error: {error.message}</h2></>); //change error message to something generic on production
 

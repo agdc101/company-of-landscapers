@@ -3,7 +3,7 @@ import { useQuery } from '@apollo/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/client';
 import client from './utils/apolloClient';
-import { get_homepage, get_portfolio } from './utils/queries';
+import { get_homepage, get_portfolio, get_global_set } from './utils/queries';
 import { AnimatePresence } from 'framer-motion';
 import Home from './views/Home';
 import About from './views/About';
@@ -13,6 +13,17 @@ import PortfolioEntry from './views/PortfolioEntry';
 import Portfolio from './views/Portfolio';
 
 function App() {
+
+  const globalLoader = async () => {
+    try {
+      const globalData = await client.query({ query: get_global_set });
+      return {
+        globalData: globalData.data,
+      };
+    } catch (error) {
+      return { error };
+    }
+  };
 
   const homePageLoader = async () => {
     try {
@@ -42,6 +53,7 @@ function App() {
       path: '/',
       element: <RootLayout />,
       errorElement: <Error />,
+      loader: globalLoader,
       children: [
         { 
           index: true, 
