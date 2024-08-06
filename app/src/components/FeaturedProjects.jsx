@@ -34,15 +34,13 @@ export default function FeaturedProjects({projectsData}) {
                         Autoplay({
                             delay: 2500,
                         }),
-                    ]}
-                >
+                    ]} >
                     <motion.div 
                         ref={featProjects}  
                         style={{
                         transform: featProjectsIsInView ? "none" : "translateY(100px)",
                         opacity: featProjectsIsInView ? 1 : 0,
-                        transition: "all 0.75s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s"
-                    }}>
+                        transition: "all 0.75s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s"}} >
                         <CarouselContent>
                             {projectsData.map((project, index) => (
                                 <CarouselItem key={index} className="md:basis-1/2 xl:basis-1/3">
