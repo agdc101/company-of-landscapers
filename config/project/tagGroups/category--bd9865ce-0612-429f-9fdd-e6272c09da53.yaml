@@ -1,6 +1,5 @@
-color: indigo
 fieldLayouts:
-  3e0e0214-d260-4cd1-9254-a007eacfff74:
+  20807134-a21f-4263-8534-a8d27ba2cc35:
     tabs:
       -
         elementCondition: null
@@ -29,14 +28,14 @@ fieldLayouts:
             step: null
             tip: null
             title: null
-            type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 53f7f122-72e3-4a62-ae42-b14d6ccc0d27
+            type: craft\fieldlayoutelements\TitleField
+            uid: 54b77a21-8681-44b9-8ccb-e34d2dcd6afb
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: aceb685c-e2ab-4797-b484-deef314f6c47 # Description
+            fieldUid: 8f75fe13-3a1f-44e6-a18d-1130662e3782 # Portfolio Types
             handle: null
             includeInCards: false
             instructions: null
@@ -45,36 +44,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 25c98b68-2a43-4e3b-aaac-cff4576c734e
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            elementCondition: null
-            fieldUid: dbc74a67-01ff-43f5-aff7-130a4a88b827 # Portfolio Images
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b2bc6a1c-a05a-45eb-9047-8f9c9644768d
+            uid: e0c2c6db-7b0b-4935-a4e6-5a960bdbc098
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 2032a165-58d4-47e3-ba24-5fd93be613da
+        uid: 0e354c08-656f-437f-9f92-ca177d1b6bda
         userCondition: null
-handle: featuredProjects
-hasTitleField: true
-icon: cannon
-name: 'featured projects'
-showSlugField: true
-showStatusField: true
-slugTranslationKeyFormat: null
-slugTranslationMethod: site
-titleFormat: ''
-titleTranslationKeyFormat: null
-titleTranslationMethod: site
+handle: category
+name: category

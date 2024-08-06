@@ -1,5 +1,23 @@
 import { gql } from '@apollo/client';
 
+export const get_global_set = gql`
+  query getGlobalSet {
+    globalSet {
+      ... on contactInformation_GlobalSet {
+        email
+        streetAddress
+        phoneNumber
+      }
+    }
+    entries(relatedToCategories: [{ slug: "featured" }]) {
+      ... on portfolio_Entry {
+        title
+        description
+        slug
+      }
+    }
+  }`;
+
 export const get_homepage = gql`
   query getHomepage {
     homeEntries {
@@ -21,6 +39,18 @@ export const get_homepage = gql`
         experienceImage {
           alt
           url
+        }
+      }
+    }
+    entries(relatedToCategories: [{ slug: "featured" }]) {
+      ... on portfolio_Entry {
+        title
+        description
+        slug
+        portfolioImage {
+          id
+          url
+          alt
         }
       }
     }

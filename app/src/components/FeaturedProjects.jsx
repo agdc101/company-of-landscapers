@@ -10,14 +10,12 @@ import { Link } from 'react-router-dom';
 import { useRef } from 'react';
 import { useInView, motion } from 'framer-motion';
 
-export default function FeaturedProjects({portfolioData}) {
+export default function FeaturedProjects({projectsData}) {
     const featProjects = useRef(null);
     const featProjectsTitle = useRef(null);
 
     const featProjectsIsInView = useInView(featProjects, { once: true });
     const featProjectsTitleIsInView = useInView(featProjects, { once: true });
-
-    console.log(portfolioData);
 
     return (
         <section className="justify-around py-20 px-14 lg:px-16 xl:px-18 bg-[#fdf1e8]">
@@ -39,7 +37,7 @@ export default function FeaturedProjects({portfolioData}) {
                         transition: "all 0.75s cubic-bezier(0.17, 0.55, 0.55, 1) 0.25s"
                     }}>
                         <CarouselContent>
-                        {portfolioData.portfolioEntries.map((project, index) => (
+                        {projectsData.map((project, index) => (
                             <CarouselItem key={index} className="md:basis-1/2 xl:basis-1/3">
                                 <Card>
                                     <CardContent>

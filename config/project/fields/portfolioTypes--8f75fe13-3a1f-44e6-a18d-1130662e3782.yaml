@@ -12,7 +12,7 @@ settings:
   minRelations: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
+  showSiteMenu: true
   source: 'group:f26d5401-bbcb-4d6d-9285-01a9e394ebae' # Types
   targetSiteId: null
   validateRelatedElements: false

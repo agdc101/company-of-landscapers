@@ -17,11 +17,8 @@ function App() {
   const homePageLoader = async () => {
     try {
       const homepageData = await client.query({ query: get_homepage });
-      const portfolioData = await client.query({ query: get_portfolio });
-  
       return {
         homepageData: homepageData.data,
-        portfolioData: portfolioData.data,
       };
     } catch (error) {
       return { error };
@@ -31,7 +28,6 @@ function App() {
   const portfolioPageLoader = async () => {
     try {
       const portfolioData = await client.query({ query: get_portfolio });
-  
       return {
         portfolioData: portfolioData.data,
       };
