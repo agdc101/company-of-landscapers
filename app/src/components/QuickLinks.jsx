@@ -10,9 +10,9 @@ export default function QuickLinks({globalData}) {
     const address = globalData.globalSet.streetAddress;
 
     return (
-        <section className="quicklinks bg-[#333333] text-white py-8 xl:py-12 px-2 xl:px-6">
-            <div className="flex flex-col md:flex-row justify-center md:justify-between xl:justify-center pl-8 md:px-4 md:py-6 md:text-center">
-                <div className="my-4 md:w-1/3">
+        <section className="quicklinks bg-[#333333] text-white py-6 xl:py-12 px-2 xl:px-6">
+            <div className="flex flex-col md:flex-row justify-center md:justify-between xl:justify-center pl-8 md:px-4 md:py-6">
+                <div className="my-4 md:w-1/4 xl:ml-48">
                     <h3 className="text-xl xl:text-2xl mb-2 xl:mb-4 font-semibold">Quicklinks</h3>
                     <ul className="text-lg">
                         <li className="my-1"><Link className="font-light" to="/">Home</Link></li>
@@ -20,7 +20,7 @@ export default function QuickLinks({globalData}) {
                         <li className="my-1"><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>
-                <div className="my-4 md:w-1/3">
+                <div className="my-4 md:w-1/4">
                     <h3 className="text-xl xl:text-2xl mb-2 xl:mb-4 font-semibold">Latest Projects</h3>
                     <ul className="text-lg">
                         {latestProjects.map((project, index) => (
@@ -28,7 +28,7 @@ export default function QuickLinks({globalData}) {
                         ))}
                     </ul>
                 </div>
-                <div className="my-4 md:w-1/3">
+                <div className="my-4 md:w-1/4">
                     <h3 className="text-xl xl:text-2xl mb-2 xl:mb-4 font-semibold">Contact us</h3>
                     <ul className="text-lg">
                         {address && <li className="my-1">{address}</li>}
