@@ -6,11 +6,11 @@ import client from './utils/apolloClient';
 import { get_homepage, get_portfolio, get_global_set } from './utils/queries';
 import { AnimatePresence } from 'framer-motion';
 import Home from './views/Home';
-import About from './views/About';
 import RootLayout from './components/Layout';
 import Error from './views/Error';
 import PortfolioEntry from './views/PortfolioEntry';
 import Portfolio from './views/Portfolio';
+import NotFound from './views/NotFound';
 
 function App() {
 
@@ -21,7 +21,7 @@ function App() {
         globalData: globalData.data,
       };
     } catch (error) {
-      return { error };
+      throw error;
     }
   };
 
@@ -32,7 +32,7 @@ function App() {
         homepageData: homepageData.data,
       };
     } catch (error) {
-      return { error };
+      throw error;
     }
   };
 
@@ -46,7 +46,6 @@ function App() {
       return { error };
     }
   }
-  
 
   const router = createBrowserRouter([
     {
@@ -75,6 +74,10 @@ function App() {
               loader: portfolioPageLoader,
             }
           ]
+        },
+        {
+          path: '*',
+          element: <NotFound />
         }
       ],
     }
