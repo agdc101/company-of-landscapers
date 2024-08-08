@@ -73,8 +73,8 @@ export const get_portfolio = gql`
     }
     portfolioHomeEntries {
       ... on portfolioHome_Entry {
-        id
         title
+        description
         heroImage {
           alt
           url
