@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Hero from "../components/Hero";
+import Hero from "../components/HomeHero";
 import { useQuery } from '@apollo/client';
 import { get_homepage } from '../utils/queries';
 

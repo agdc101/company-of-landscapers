@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - f3577129-b42e-4ebb-bc16-a26371c1cf84 # portfolio home
+handle: portfolioHome
+maxAuthors: 1
+name: 'Portfolio Home'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  102e3dff-3159-462b-a2ee-18957798f6d7: # company-of-landscapers
+    enabledByDefault: true
+    hasUrls: true
+    template: portfolio-home/_entry
+    uriFormat: portfolio-home
+type: single

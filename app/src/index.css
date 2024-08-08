@@ -84,7 +84,7 @@
 }
 
 .active {
-  color: rgb(92, 139, 109);
+  color: rgb(140, 209, 167);
 }
 
 h1 {
@@ -94,7 +94,7 @@ a {
   transition: color 0.2s;
 }
 a:hover {
-  color: rgb(92, 139, 109);
+  color: rgb(140, 209, 167);
 }
 
 .hero-image-container::before {

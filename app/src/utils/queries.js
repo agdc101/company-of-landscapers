@@ -48,7 +48,6 @@ export const get_homepage = gql`
         description
         slug
         portfolioImage {
-          id
           url
           alt
         }
@@ -63,12 +62,22 @@ export const get_portfolio = gql`
         id
         title
         description
+        projectDescription
         slug
         portfolioImage {
           id
           url
           alt
-          img
+        }
+      }
+    }
+    portfolioHomeEntries {
+      ... on portfolioHome_Entry {
+        id
+        title
+        heroImage {
+          alt
+          url
         }
       }
     }

@@ -1,5 +1,5 @@
 import { useLoaderData } from 'react-router-dom';
-import Hero from '../components/Hero';
+import HomeHero from '../components/HomeHero';
 import Nav from '../components/Nav';
 import Introduction from "../components/Introduction";
 import Experience from "../components/Experience";
@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <>
-      <Hero imageUrl={homePage.heroImage[0].url} imageAlt={homePage.heroImage[0].alt} title={homePage.heroTitle} text={homePage.heroText} />
+      <HomeHero imageUrl={homePage.heroImage[0].url} imageAlt={homePage.heroImage[0].alt} title={homePage.heroTitle} text={homePage.heroText} />
       <Introduction homePage={homePage} />
       <Experience homePage={homePage} />
       <FeaturedProjects projectsData={featuredProjectsData} />

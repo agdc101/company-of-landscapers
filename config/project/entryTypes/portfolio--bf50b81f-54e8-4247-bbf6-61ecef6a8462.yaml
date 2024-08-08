@@ -51,6 +51,21 @@ fieldLayouts:
             width: 100
           -
             elementCondition: null
+            fieldUid: ef7b4039-ac13-4438-be1e-6e99da5a5441 # Project Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5ca753a5-07fd-481e-af50-da95ff3c7601
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 1c9b8e15-ec0f-4ef3-bc89-e9af4865c878
             userCondition: null
@@ -74,21 +89,6 @@ fieldLayouts:
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 295faf08-4a0a-44e1-8b99-66c298104481
             userCondition: null
-          -
-            elementCondition: null
-            fieldUid: 4ceed06c-69ec-4d1d-b34c-8c8561a9d5dc
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 5d086fac-1f43-486e-9ecb-fa15bfeb63f5
-            userCondition: null
-            warning: null
-            width: 100
           -
             elementCondition: null
             fieldUid: 8f75fe13-3a1f-44e6-a18d-1130662e3782 # Portfolio Types

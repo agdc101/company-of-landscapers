@@ -1,4 +1,4 @@
-dateModified: 1722893656
+dateModified: 1723101836
 elementSources:
   craft\elements\Entry:
     -
@@ -38,6 +38,7 @@ fs:
 meta:
   __names__:
     4a535fdc-5034-43ae-bbff-b5d1b8b0ec27: company-of-landscapers # company-of-landscapers
+    4bc0b01b-ec98-4d67-9258-7ac792b89ea5: 'Portfolio Home' # Portfolio Home
     5ba59a8e-8f7d-4263-8953-9ecb6b08e60d: about # about
     6d6d30ea-3be2-411e-ae32-b53bce8c7ff5: 'Phone Number' # Phone Number
     8f75fe13-3a1f-44e6-a18d-1130662e3782: 'Portfolio Types' # Portfolio Types
@@ -67,7 +68,9 @@ meta:
     d6fae4f2-b9a8-4131-b09d-4e457c4d77fc: 'Experience Image' # Experience Image
     dbc74a67-01ff-43f5-aff7-130a4a88b827: 'Portfolio Images' # Portfolio Images
     e85ddff0-4029-4929-a287-92eaf0c83603: 'Contact Information' # Contact Information
+    ef7b4039-ac13-4438-be1e-6e99da5a5441: 'Project Description' # Project Description
     f26d5401-bbcb-4d6d-9285-01a9e394ebae: Types # Types
+    f3577129-b42e-4ebb-bc16-a26371c1cf84: 'portfolio home' # portfolio home
 plugins:
   element-api:
     edition: standard

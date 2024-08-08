@@ -6,6 +6,7 @@ scope:
   - 'elements.revisions:read'
   - 'elements.inactive:read'
   - 'sections.a020d92f-e1bd-41f9-ab8e-28581deb0902:read' # Home
+  - 'sections.4bc0b01b-ec98-4d67-9258-7ac792b89ea5:read' # Portfolio Home
   - 'sections.a7b1de76-4c29-4448-b3f9-ee346e9c8ecd:read' # Portfolio
   - 'volumes.a64bad47-8bd1-4e6b-941a-c69229d717cb:read' # Images
   - 'globalsets.e85ddff0-4029-4929-a287-92eaf0c83603:read' # Contact Information

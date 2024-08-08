@@ -15,7 +15,7 @@ export default function RootLayout() {
 
     return (
         <div className="mx-auto flex flex-col min-h-svh overflow-hidden">
-            <Nav isMainNav={true} />
+            <Nav />
             <main className="flex-1">
                 <Outlet />
             </main>

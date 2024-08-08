@@ -1,23 +1,21 @@
 
-import { useParams, useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import Hero from "@/components/Hero";
+import Error from "./Error";
 
 export default function Portfolio() {
-
   const loaderData = useLoaderData();
   const { portfolioData, error, loading } = loaderData;
+  const portfolioHomeData = portfolioData.portfolioHomeEntries[0];
 
-//   const params = useParams();
-//   console.log('params:', params.slug);
-//   console.log('portfolioData:', portfolioData.portfolioEntries);
+  console.log('portfolioData:', portfolioHomeData);
 
-
-//   if (loading) return <p>Loading...</p>;
-//   if (error) return <p>Error: {error.message}</p>;
+  if (loading) return <p>Loading...</p>;
+  if (error) return <Error/>;
 
   return (
     <>
-      {/* <Hero imageUrl={entry.portfolioImage[0].url} imageAlt={entry.portfolioImage[0].alt} title={entry.title} text={entry.description} /> */}
+      <Hero imageUrl={portfolioHomeData.heroImage[0].url} imageAlt={portfolioHomeData.heroImage[0].alt} title={portfolioHomeData.title} />
       <h1>Our Portfolio</h1>
         {/* <div>
           <h2>{entry.title}</h2>
