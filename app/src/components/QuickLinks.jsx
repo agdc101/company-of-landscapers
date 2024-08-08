@@ -1,5 +1,4 @@
-import { useRef } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function QuickLinks({globalData}) {
 
@@ -15,16 +14,16 @@ export default function QuickLinks({globalData}) {
                 <div className="my-4 md:w-1/4 xl:ml-48">
                     <h3 className="text-xl xl:text-2xl mb-2 xl:mb-4 font-semibold">Quicklinks</h3>
                     <ul className="text-lg">
-                        <li className="my-1"><Link className="font-light" to="/">Home</Link></li>
-                        <li className="my-1"><Link to="/portfolio">Our Work</Link></li>
-                        <li className="my-1"><Link to="/contact">Contact</Link></li>
+                        <li className="my-1"><NavLink className="font-light" to="/">Home</NavLink></li>
+                        <li className="my-1"><NavLink to="/portfolio">Our Work</NavLink></li>
+                        <li className="my-1"><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                 </div>
                 <div className="my-4 md:w-1/4">
                     <h3 className="text-xl xl:text-2xl mb-2 xl:mb-4 font-semibold">Latest Projects</h3>
                     <ul className="text-lg">
                         {latestProjects.map((project, index) => (
-                            <li className="my-1" key={index}><Link to={`/portfolio/${project.slug}`}>{project.title}</Link></li>
+                            <li className="my-1" key={index}><NavLink to={`/portfolio/${project.slug}`}>{project.title}</NavLink></li>
                         ))}
                     </ul>
                 </div>

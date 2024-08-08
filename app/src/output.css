@@ -728,6 +728,10 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-6 {
   margin-bottom: 1.5rem;
 }
@@ -754,10 +758,6 @@ body {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .block {
@@ -1307,6 +1307,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.active {
+  color: rgb(92, 139, 109);
+}
+
 h1 {
   font-family: "Playwrite NO", cursive;
 }
@@ -1316,7 +1320,7 @@ a {
 }
 
 a:hover {
-  color: rgb(142, 147, 154);
+  color: rgb(92, 139, 109);
 }
 
 .hero-image-container::before {
