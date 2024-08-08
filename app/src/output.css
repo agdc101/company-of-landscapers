@@ -617,6 +617,10 @@ body {
   border-width: 0;
 }
 
+.pointer-events-none {
+  pointer-events: none;
+}
+
 .fixed {
   position: fixed;
 }
@@ -673,20 +677,12 @@ body {
   top: 50%;
 }
 
-.top-28 {
-  top: 7rem;
+.top-36 {
+  top: 9rem;
 }
 
 .top-40 {
   top: 10rem;
-}
-
-.top-32 {
-  top: 8rem;
-}
-
-.top-36 {
-  top: 9rem;
 }
 
 .z-10 {
@@ -743,11 +739,6 @@ body {
   margin-bottom: 1.5rem;
 }
 
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .-ml-4 {
   margin-left: -1rem;
 }
@@ -776,6 +767,10 @@ body {
   margin-left: auto;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-14 {
   margin-top: 3.5rem;
 }
@@ -796,20 +791,8 @@ body {
   margin-top: 2rem;
 }
 
-.mt-4 {
-  margin-top: 1rem;
-}
-
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
-.mt-12 {
-  margin-top: 3rem;
-}
-
-.mt-10 {
-  margin-top: 2.5rem;
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .block {
@@ -896,6 +879,10 @@ body {
   width: 2rem;
 }
 
+.w-9 {
+  width: 2.25rem;
+}
+
 .w-\[90\%\] {
   width: 90%;
 }
@@ -951,6 +938,10 @@ body {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.flex-row {
+  flex-direction: row;
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -979,28 +970,12 @@ body {
   justify-content: space-evenly;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
-.gap-2 {
-  gap: 0.5rem;
-}
-
-.gap-6 {
-  gap: 1.5rem;
+.gap-1 {
+  gap: 0.25rem;
 }
 
 .gap-10 {
   gap: 2.5rem;
-}
-
-.gap-20 {
-  gap: 5rem;
-}
-
-.gap-8 {
-  gap: 2rem;
 }
 
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
@@ -1191,6 +1166,14 @@ body {
   padding-bottom: 1.5rem;
 }
 
+.pl-2 {
+  padding-left: 0.5rem;
+}
+
+.pl-2\.5 {
+  padding-left: 0.625rem;
+}
+
 .pl-4 {
   padding-left: 1rem;
 }
@@ -1201,6 +1184,10 @@ body {
 
 .pr-2 {
   padding-right: 0.5rem;
+}
+
+.pr-2\.5 {
+  padding-right: 0.625rem;
 }
 
 .pt-0 {
@@ -1316,11 +1303,6 @@ body {
   color: hsl(var(--primary-foreground));
 }
 
-.text-red-900 {
-  --tw-text-opacity: 1;
-  color: rgb(127 29 29 / var(--tw-text-opacity));
-}
-
 .text-secondary-foreground {
   color: hsl(var(--secondary-foreground));
 }
@@ -1332,6 +1314,10 @@ body {
 
 .underline-offset-4 {
   text-underline-offset: 4px;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-custom {
@@ -1540,10 +1526,6 @@ a:hover {
     display: none;
   }
 
-  .md\:max-h-\[25dvh\] {
-    max-height: 25dvh;
-  }
-
   .md\:max-h-\[30dvh\] {
     max-height: 30dvh;
   }
@@ -1604,9 +1586,9 @@ a:hover {
     padding-left: 1.5rem;
   }
 
-  .md\:text-4xl {
-    font-size: 2.25rem;
-    line-height: 2.5rem;
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
   }
 
   .md\:text-7xl {
@@ -1623,18 +1605,9 @@ a:hover {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
-
-  .md\:text-5xl {
-    font-size: 3rem;
-    line-height: 1;
-  }
 }
 
 @media (min-width: 1024px) {
-  .lg\:top-56 {
-    top: 14rem;
-  }
-
   .lg\:mt-12 {
     margin-top: 3rem;
   }
@@ -1673,9 +1646,9 @@ a:hover {
     padding-right: 4rem;
   }
 
-  .lg\:px-28 {
-    padding-left: 7rem;
-    padding-right: 7rem;
+  .lg\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .lg\:px-8 {
@@ -1683,29 +1656,14 @@ a:hover {
     padding-right: 2rem;
   }
 
-  .lg\:py-6 {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .lg\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
-  .lg\:px-20 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  }
-
-  .lg\:py-10 {
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-
   .lg\:py-12 {
     padding-top: 3rem;
     padding-bottom: 3rem;
+  }
+
+  .lg\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 
   .lg\:text-2xl {
@@ -1736,28 +1694,12 @@ a:hover {
     margin-left: 11rem;
   }
 
-  .xl\:mt-14 {
-    margin-top: 3.5rem;
-  }
-
-  .xl\:mt-16 {
-    margin-top: 4rem;
-  }
-
   .xl\:block {
     display: block;
   }
 
   .xl\:max-h-\[50dvh\] {
     max-height: 50dvh;
-  }
-
-  .xl\:max-h-\[45dvh\] {
-    max-height: 45dvh;
-  }
-
-  .xl\:max-h-\[40dvh\] {
-    max-height: 40dvh;
   }
 
   .xl\:w-1\/6 {
@@ -1826,10 +1768,6 @@ a:hover {
 }
 
 @media (min-width: 1536px) {
-  .\32xl\:max-h-\[40dvh\] {
-    max-height: 40dvh;
-  }
-
   .\32xl\:w-1\/2 {
     width: 50%;
   }
