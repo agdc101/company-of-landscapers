@@ -57,7 +57,7 @@ export default function FeaturedProjects({projectsData}) {
                     <CarouselNext />
                 </Carousel>
             </div>
-            <Link to="/our-work" className="mt-14 border border-gray-400 block text-center rounded py-2 xl:w-1/6 m-auto">View all our work</Link>
+            <Link to="/portfolio" className="mt-14 border border-gray-400 block text-center rounded py-2 xl:w-1/6 m-auto">View all our work</Link>
         </section>
     )
 

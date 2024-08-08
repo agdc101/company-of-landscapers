@@ -15,7 +15,7 @@ export default function QuickLinks({globalData}) {
                     <h3 className="text-xl xl:text-2xl mb-2 xl:mb-4 font-semibold">Quicklinks</h3>
                     <ul className="text-lg">
                         <li className="my-1"><NavLink className="font-light" to="/">Home</NavLink></li>
-                        <li className="my-1"><NavLink to="/portfolio">Our Work</NavLink></li>
+                        <li className="my-1"><NavLink end to="/portfolio">Our Work</NavLink></li>
                         <li className="my-1"><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                 </div>
@@ -38,7 +38,6 @@ export default function QuickLinks({globalData}) {
                         )}
                         {number && <li className="my-1">{number}</li>}
                     </ul>
-
                 </div>
             </div>
         </section>
