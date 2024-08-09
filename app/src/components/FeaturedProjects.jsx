@@ -29,7 +29,7 @@ export default function FeaturedProjects({projectsData}) {
             }} >Featured Projects
             </motion.h4>
             <div className="flex flex-col justify-evenly text-center items-center">
-                <Carousel plugins={[ Autoplay({delay: 2500,}) ]} >
+                <Carousel plugins={[ Autoplay({delay: 2500}) ]} >
                     <motion.div 
                         ref={featProjects}  
                         style={{
