@@ -23,7 +23,26 @@ const framerAnimations = {
         initial: { opacity: 0 },
         animate: { opacity: 1 },
         transition: { duration: 0.75, ease: "easeInOut" }
-    }   
+    },   
+
+    containerVariants: {
+        initial: { opacity: 0 },
+        animate: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.2, // Delay between animations of each child
+                delayChildren: 0.05, // Delay before children animations start
+                duration: 1,
+            },
+        },
+        exit: { opacity: 0 },
+    },
+
+    itemVariants: {
+        initial: { opacity: 0, y: 50 },
+        animate: { opacity: 1, y: 0, transition: { duration: 0.75 } },
+        exit: { opacity: 0, y: -50 },
+    }
 }
 
 export default framerAnimations;
