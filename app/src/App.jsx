@@ -1,8 +1,6 @@
-import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/client';
 import client from './utils/apolloClient';
-import { AnimatePresence } from 'framer-motion';
 import Home from './views/Home';
 import RootLayout from './components/Layout';
 import Error from './views/Error';
@@ -50,9 +48,7 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      <AnimatePresence>
-        <RouterProvider router={router} />
-      </AnimatePresence>
+      <RouterProvider router={router} />
     </ApolloProvider>
   );
 }

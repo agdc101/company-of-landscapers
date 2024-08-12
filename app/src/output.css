@@ -1695,10 +1695,6 @@ a:hover {
 }
 
 @media (min-width: 1280px) {
-  .xl\:top-56 {
-    top: 14rem;
-  }
-
   .xl\:top-60 {
     top: 15rem;
   }
