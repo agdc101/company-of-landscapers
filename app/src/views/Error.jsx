@@ -5,10 +5,11 @@ import { Link, useRouteError } from "react-router-dom";
 const Error = () => {
     const error = useRouteError();
     console.error(error);
+    const hasError = error ? true : false;
 
     return (
         <div className="mx-auto flex flex-col min-h-svh">
-            <Nav isMainNav={false} />
+            <Nav hasError={hasError} />
             <main className="flex-1 flex flex-col items-center justify-center" >
                 <h1 className="text-4xl xl:text-5xl mb-6">500</h1>
                 <p className="text-3xl mb-4">Sorry there has been an Error. Please try again later.</p>

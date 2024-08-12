@@ -13,8 +13,6 @@ const Home = () => {
   const homePage = homepageData.homeEntries[0];
   const featuredProjectsData = homepageData.entries;
 
-  console.log(homepageData);
-
   if (loading) return <><Nav/><h3 className="text-center mt-32 text-2xl">Loading...</h3></>;
   if (error) return ( <Error /> );
 

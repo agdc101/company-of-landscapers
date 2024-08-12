@@ -1,16 +1,13 @@
 
 import { useState, useEffect } from "react";
 import Hamburger from 'hamburger-react';
-import { NavLink, Link, useLocation } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
 import framerAnimations from "../utils/framer-anims";
 
-const Nav = () => {
+const Nav = (error) => {
     const [isOpen, setOpen] = useState(false);
     const { scrollY } = useScroll();
-    const location = useLocation();
-
-    const homeNav = location.pathname === '/';
     const backgroundColor = useTransform(scrollY, [0, 200], ["rgba(0, 0, 0, 0)", "rgba(84, 111, 104, 1)"]);
     const boxShadow = useTransform(scrollY, [400, 1000], ["none", "0px 5px 12px rgba(0, 0, 0, 0.85)"]);
     const titleScale = useTransform(scrollY, [0, 100], [1, 1.065]);
@@ -21,13 +18,13 @@ const Nav = () => {
     }, [isOpen]);
 
     return (
-        <motion.header className="flex justify-between items-center pl-4 pr-2 md:pl-6 lg:px-8 z-30 h-20 fixed text-white w-full" style={{ backgroundColor: homeNav ? backgroundColor : 'rgb(84, 111, 104)', boxShadow: boxShadow  } }>
+        <motion.header className="flex justify-between items-center pl-4 pr-2 md:pl-6 lg:px-8 z-30 h-20 fixed text-white w-full" style={{ backgroundColor: !error.hasError ? backgroundColor : 'rgb(84, 111, 104)', boxShadow: boxShadow  } }>
             <Link to="/"><motion.h1 className="card-header-title relative z-40 text-lg lg:text-2xl lg:font-light" style={{ scale: titleScale }} initial={{ opacity: 0 }} animate={{color: isOpen ? '#000000' : '#FFFFFF', opacity: 1 }} transition={{ delay: 0.5, duration: 1 }}>The Company Of Landscapers</motion.h1></Link>
             <motion.nav className="hidden md:flex justify-between" {...framerAnimations.fadeIn}>
-                <ul className="card-header-icon md:flex text-lg font-light">
-                    <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/" className="font-light">Home</NavLink></li>
-                    <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/portfolio" className="font-light">Our Work</NavLink></li>
-                    <li className="px-4 2xl:px-6 2xl:text-xl"><NavLink to="/contact" className="font-light">Contact</NavLink></li>
+                <ul className="card-header-icon md:flex text-lg font-light space-x-4 2xl:space-x-6">
+                    <li className="2xl:text-xl"><NavLink to="/" className="font-light">Home</NavLink></li>
+                    <li className="2xl:text-xl"><NavLink to="/portfolio" className="font-light">Our Work</NavLink></li>
+                    <li className="2xl:text-xl"><NavLink to="/contact" className="font-light">Contact</NavLink></li>
                 </ul>
             </motion.nav>
             {/* Mobile Hamburger Nav */}

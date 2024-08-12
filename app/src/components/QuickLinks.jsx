@@ -1,8 +1,6 @@
 import { NavLink } from "react-router-dom";
 
 export default function QuickLinks({globalData}) {
-
-    console.log(globalData);
     const latestProjects = globalData.entries;
     const email = globalData.globalSet.email;
     const number = globalData.globalSet.phoneNumber;
@@ -13,10 +11,10 @@ export default function QuickLinks({globalData}) {
             <div className="flex flex-col md:flex-row justify-center md:justify-between xl:justify-center pl-8 md:px-4 md:py-6">
                 <div className="my-4 md:w-1/4 xl:ml-44">
                     <h3 className="text-xl xl:text-2xl mb-2 xl:mb-4 font-semibold">Quicklinks</h3>
-                    <ul className="text-lg">
-                        <li className="my-1"><NavLink className="font-light" to="/">Home</NavLink></li>
-                        <li className="my-1"><NavLink end to="/portfolio">Our Work</NavLink></li>
-                        <li className="my-1"><NavLink to="/contact">Contact</NavLink></li>
+                    <ul className="text-lg space-y-1">
+                        <li><NavLink className="font-light" to="/">Home</NavLink></li>
+                        <li><NavLink end to="/portfolio">Our Work</NavLink></li>
+                        <li><NavLink to="/contact">Contact</NavLink></li>
                     </ul>
                 </div>
                 <div className="my-4 md:w-1/4">
