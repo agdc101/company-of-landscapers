@@ -23,7 +23,7 @@ const Nav = (error) => {
             <motion.nav className="hidden md:flex justify-between" {...framerAnimations.fadeIn}>
                 <ul className="card-header-icon md:flex text-lg font-light space-x-4 2xl:space-x-6">
                     <li className="2xl:text-xl"><NavLink to="/" className="font-light">Home</NavLink></li>
-                    <li className="2xl:text-xl"><NavLink to="/portfolio" className="font-light">Our Work</NavLink></li>
+                    <li className="2xl:text-xl"><NavLink end to="/portfolio" className="font-light">Our Work</NavLink></li>
                     <li className="2xl:text-xl"><NavLink to="/contact" className="font-light">Contact</NavLink></li>
                 </ul>
             </motion.nav>
@@ -37,7 +37,7 @@ const Nav = (error) => {
                         <motion.div className="bg-white absolute top-0 left-0 right-0 bottom-0 z-30 h-screen" {...framerAnimations.mobileNav}>
                             <ul className="card-header-icon font-light mt-24">
                                 <li className="p-7 text-3xl"><NavLink to="/" className="font-light text-black">Home</NavLink></li>
-                                <li className="p-7 text-3xl"><NavLink to="/our-work" className="font-light text-black">Our Work</NavLink></li>
+                                <li className="p-7 text-3xl"><NavLink end to="/our-work" className="font-light text-black">Our Work</NavLink></li>
                                 <li className="p-7 text-3xl"><NavLink to="/contact" className="font-light text-black">Contact</NavLink></li>
                             </ul>
                         </motion.div>

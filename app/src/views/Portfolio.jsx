@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/carousel"
 import Autoplay from "embla-carousel-autoplay"
 import { Link, useLoaderData } from "react-router-dom";
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card";
 import Hero from "@/components/Hero";
 import Error from "./Error";
 import { motion } from "framer-motion";

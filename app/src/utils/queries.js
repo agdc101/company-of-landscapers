@@ -66,6 +66,7 @@ export const get_portfolio = gql`
         slug
         portfolioImage {
           id
+          title
           url
           alt
         }

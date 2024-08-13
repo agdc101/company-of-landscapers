@@ -7,9 +7,9 @@ export default function QuickLinks({globalData}) {
     const address = globalData.globalSet.streetAddress;
 
     return (
-        <section className="quicklinks bg-[#333333] text-white py-6 xl:py-12 px-2 xl:px-6">
+        <section className="quicklinks bg-[#333333] text-white py-6 xl:py-10 px-2 xl:px-6">
             <div className="flex flex-col md:flex-row justify-center md:justify-between xl:justify-center pl-8 md:px-4 md:py-6">
-                <div className="my-4 md:w-1/4 xl:ml-44">
+                <div className="my-4 md:w-1/4 xl:ml-36">
                     <h3 className="text-xl xl:text-2xl mb-2 xl:mb-4 font-semibold">Quicklinks</h3>
                     <ul className="text-lg space-y-1">
                         <li><NavLink className="font-light" to="/">Home</NavLink></li>
