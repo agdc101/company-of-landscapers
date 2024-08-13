@@ -7,8 +7,7 @@ import FeaturedProjects from '@/components/FeaturedProjects';
 import Error from './Error';
 
 const Home = () => {
-  const loaderData = useLoaderData();
-  const { homepageData, error, loading } = loaderData;
+  const { homepageData, error, loading } = useLoaderData();
 
   const homePage = homepageData.homeEntries[0];
   const featuredProjectsData = homepageData.entries;

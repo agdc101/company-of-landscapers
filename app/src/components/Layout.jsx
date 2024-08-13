@@ -6,9 +6,7 @@ import { useLoaderData } from "react-router-dom";
 import Error from "../views/Error";
 
 export default function RootLayout() {
-
-    const loaderData = useLoaderData();
-    const { globalData, error, loading } = loaderData;
+    const { globalData, error, loading } = useLoaderData();
 
     if (loading) return <><Nav/><h3 className="text-center mt-32 text-2xl">Loading...</h3></>;
     if (error) return ( <Error/>);
