@@ -57,7 +57,7 @@ export default function Portfolio() {
                                     <CarouselContent>
                                           {entry.portfolioImage.map((image, index) => (
                                              <CarouselItem key={index}>
-                                                <img className="rounded shadow-custom mx-auto" src={image.url} alt={image.alt} />
+                                                <img loading="lazy" className="rounded shadow-custom mx-auto" src={image.url} alt={image.alt} />
                                              </CarouselItem>
                                           ))}
                                     </CarouselContent>

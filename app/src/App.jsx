@@ -1,15 +1,30 @@
+import React, { useState, Suspense, lazy, useEffect } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/client';
 import client from './utils/apolloClient';
-import Home from './views/Home';
 import RootLayout from './components/Layout';
 import Error from './views/Error';
-import PortfolioEntry from './views/PortfolioEntry';
-import Portfolio from './views/Portfolio';
 import NotFound from './views/NotFound';
 import { globalLoader, homePageLoader, portfolioPageLoader } from './utils/loaders';
+import Loading from './views/Loading';  
+const Home = lazy(() => import('./views/Home'));
+const Portfolio = lazy(() => import('./views/Portfolio'));
+const PortfolioEntry = lazy(() => import('./views/PortfolioEntry'));
 
 function App() {
+  const [shouldLazyLoad, setShouldLazyLoad] = useState(false);
+
+  useEffect(() => {
+    // Check if the user is on a slow network, and if so will enable lazy loading
+    const connection = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+
+    if (connection) {
+      const slowNetwork = connection.effectiveType === '2g' || connection.effectiveType === '3g' || connection.saveData;
+      setShouldLazyLoad(slowNetwork);
+    }
+
+  }, []);
+
   const router = createBrowserRouter([
     {
       path: '/',
@@ -19,9 +34,8 @@ function App() {
       children: [
         { 
           index: true, 
-          element: <Home />, 
-          loader: homePageLoader, 
-          prefetch: true
+          element: <Home />,
+          loader: homePageLoader
         },
         { 
           path: 'portfolio',
@@ -29,12 +43,12 @@ function App() {
             {
               index: true,
               element: <Portfolio />,
-              loader: portfolioPageLoader,
+              loader: portfolioPageLoader
             },
             {
               path: ':slug', 
               element: <PortfolioEntry/>,
-              loader: portfolioPageLoader,
+              loader: portfolioPageLoader
             }
           ]
         },
@@ -48,7 +62,13 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
+      {shouldLazyLoad ? (
+        <Suspense fallback={<Loading />}>
+          <RouterProvider router={router} />
+        </Suspense>
+      ) : (
         <RouterProvider router={router} />
+      )}
     </ApolloProvider>
   );
 }
