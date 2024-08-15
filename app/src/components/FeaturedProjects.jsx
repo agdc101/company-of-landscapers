@@ -44,7 +44,7 @@ export default function FeaturedProjects({projectsData}) {
                                             <h4 className="text-2xl mt-5">{project.title}</h4>
                                             <p className="my-5 md:my-8">{project.description}</p>
                                             <Link to={`/portfolio/${project.slug}`}>
-                                                <img className="rounded shadow-custom mx-auto" src={project.portfolioImage[0].url} alt={project.portfolioImage[0].alt} />
+                                                <img loading="lazy" className="rounded shadow-custom mx-auto" src={project.portfolioImage[0].url} alt={project.portfolioImage[0].alt} />
                                             </Link>
                                             <Link to={`/portfolio/${project.slug}`} className="mt-5 border italic block text-center rounded py-2 w-2/6 md:w-3/6 lg:w-3/6 m-auto">View project</Link>
                                         </CardContent>
