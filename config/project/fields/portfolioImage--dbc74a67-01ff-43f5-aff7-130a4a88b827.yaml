@@ -20,7 +20,7 @@ settings:
   restrictFiles: true
   restrictLocation: true
   restrictedDefaultUploadSubpath: null
-  restrictedLocationSource: 'volume:a64bad47-8bd1-4e6b-941a-c69229d717cb' # Images
+  restrictedLocationSource: 'volume:7cd5775b-a151-47cc-8ae5-9c3c603098b9' # Google Storage
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false

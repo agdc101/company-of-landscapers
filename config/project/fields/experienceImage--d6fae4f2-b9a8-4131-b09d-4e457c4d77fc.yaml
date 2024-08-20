@@ -9,8 +9,8 @@ settings:
   allowUploads: true
   allowedKinds: null
   branchLimit: null
-  defaultUploadLocationSource: 'volume:a64bad47-8bd1-4e6b-941a-c69229d717cb' # Images
-  defaultUploadLocationSubpath: null
+  defaultUploadLocationSource: 'volume:7cd5775b-a151-47cc-8ae5-9c3c603098b9' # Google Storage
+  defaultUploadLocationSubpath: images
   localizeRelations: false
   maintainHierarchy: false
   maxRelations: null
@@ -23,8 +23,8 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: false
-  showUnpermittedFiles: false
+  showSiteMenu: true
+  showUnpermittedFiles: true
   showUnpermittedVolumes: false
   sources: '*'
   targetSiteId: null

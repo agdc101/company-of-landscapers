@@ -4,6 +4,7 @@
   "require": {
     "craftcms/cms": "5.2.3",
     "craftcms/element-api": "4.1.0",
+    "craftcms/google-cloud": "2.2.0",
     "vlucas/phpdotenv": "^5.4.0"
   },
   "require-dev": {

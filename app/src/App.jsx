@@ -62,7 +62,7 @@ function App() {
 
   return (
     <ApolloProvider client={client}>
-      {shouldLazyLoad ? (
+      {shouldLazyLoad ? ( //only show the loading component if user is on a slow network
         <Suspense fallback={<Loading />}>
           <RouterProvider router={router} />
         </Suspense>
