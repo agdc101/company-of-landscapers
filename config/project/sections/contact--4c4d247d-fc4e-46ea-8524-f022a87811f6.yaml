@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 05088608-0a21-44e0-9cc9-4868e395af3d # contact
+handle: contact
+maxAuthors: 1
+name: Contact
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  102e3dff-3159-462b-a2ee-18957798f6d7: # company-of-landscapers
+    enabledByDefault: true
+    hasUrls: true
+    template: contact/_entry
+    uriFormat: contact
+type: single

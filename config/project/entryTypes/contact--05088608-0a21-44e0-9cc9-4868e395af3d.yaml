@@ -1,0 +1,80 @@
+color: orange
+fieldLayouts:
+  95bf8433-f908-4917-8e54-3cebd9c0bad2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            elementCondition: null
+            fieldUid: b001ba68-b3f9-4f1e-8d90-79f570ab6c3c # Hero Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b914a273-bbb3-4063-b90b-6579dc490666
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 53d8741f-4842-4c46-a8c7-a663778bb5e3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: aceb685c-e2ab-4797-b484-deef314f6c47 # Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 28dd9078-8d83-4024-8cba-b9ac2ed29935
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e1a38571-9307-487d-b837-e50f087e713d
+        userCondition: null
+handle: contact
+hasTitleField: true
+icon: address-book
+name: contact
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

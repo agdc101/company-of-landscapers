@@ -19,6 +19,7 @@ import Hero from "@/components/Hero";
 import Error from "./Error";
 import { motion } from "framer-motion";
 import framerAnimations from "@/utils/framer-anims";
+import Loading from "./Loading";
 
 export default function Portfolio() {
    const loaderData = useLoaderData();
@@ -29,7 +30,7 @@ export default function Portfolio() {
    const itemsPerPage = 3;
    const endIndex = Math.min(startIndex + itemsPerPage, portfolioEntries.length);
 
-   if (loading) return <p>Loading...</p>;
+   if (loading) return <Loading/>;
    if (error) return <Error/>;
 
    return (

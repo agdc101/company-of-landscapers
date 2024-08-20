@@ -5,8 +5,9 @@ import client from './utils/apolloClient';
 import RootLayout from './components/Layout';
 import Error from './views/Error';
 import NotFound from './views/NotFound';
-import { globalLoader, homePageLoader, portfolioPageLoader } from './utils/loaders';
+import { globalLoader, homePageLoader, portfolioPageLoader, contactPageLoader } from './utils/loaders';
 import Loading from './views/Loading';  
+import { Contact } from './views/Contact';
 const Home = lazy(() => import('./views/Home'));
 const Portfolio = lazy(() => import('./views/Portfolio'));
 const PortfolioEntry = lazy(() => import('./views/PortfolioEntry'));
@@ -51,6 +52,12 @@ function App() {
               loader: portfolioPageLoader
             }
           ]
+        },
+        {
+          path: 'contact',
+          index: true,
+          element: <Contact/>,
+          loader: contactPageLoader
         },
         {
           path: '*',

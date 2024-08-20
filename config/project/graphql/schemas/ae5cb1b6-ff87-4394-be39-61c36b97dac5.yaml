@@ -5,6 +5,7 @@ scope:
   - 'elements.drafts:read'
   - 'elements.revisions:read'
   - 'elements.inactive:read'
+  - 'sections.4c4d247d-fc4e-46ea-8524-f022a87811f6:read' # Contact
   - 'sections.a020d92f-e1bd-41f9-ab8e-28581deb0902:read' # Home
   - 'sections.4bc0b01b-ec98-4d67-9258-7ac792b89ea5:read' # Portfolio Home
   - 'sections.a7b1de76-4c29-4448-b3f9-ee346e9c8ecd:read' # Portfolio
@@ -12,6 +13,7 @@ scope:
   - 'volumes.7cd5775b-a151-47cc-8ae5-9c3c603098b9:read' # Google Storage
   - 'globalsets.e85ddff0-4029-4929-a287-92eaf0c83603:read' # Contact Information
   - 'categorygroups.f26d5401-bbcb-4d6d-9285-01a9e394ebae:read' # Types
+  - 'sections.4c4d247d-fc4e-46ea-8524-f022a87811f6:save' # Contact
   - 'sections.a020d92f-e1bd-41f9-ab8e-28581deb0902:save' # Home
   - 'sections.4bc0b01b-ec98-4d67-9258-7ac792b89ea5:save' # Portfolio Home
   - 'sections.a7b1de76-4c29-4448-b3f9-ee346e9c8ecd:edit' # Portfolio
