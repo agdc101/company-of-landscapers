@@ -5,7 +5,8 @@
     "craftcms/cms": "5.2.3",
     "craftcms/element-api": "4.1.0",
     "craftcms/google-cloud": "2.2.0",
-    "vlucas/phpdotenv": "^5.4.0"
+    "vlucas/phpdotenv": "^5.4.0",
+    "web-auth/webauthn-lib": "^4.8"
   },
   "require-dev": {
     "craftcms/generator": "^2.0.0",
