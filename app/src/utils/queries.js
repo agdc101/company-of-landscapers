@@ -95,4 +95,12 @@ export const get_contact_set = gql`
         }
       }
     }
+    globalSet {
+      ... on contactInformation_GlobalSet {
+        id
+        email
+        streetAddress
+        phoneNumber
+      }
+    }
   }`;
