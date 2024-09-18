@@ -40,7 +40,7 @@ fieldLayouts:
 handle: types
 name: Types
 siteSettings:
-  102e3dff-3159-462b-a2ee-18957798f6d7: # company-of-landscapers
+  102e3dff-3159-462b-a2ee-18957798f6d7: # The Company of Landscapers
     hasUrls: true
     template: portfolio/_type
     uriFormat: 'types/{slug}'
