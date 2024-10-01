@@ -1,4 +1,4 @@
-# Craft CMS Application
+# The Company of Landscapers
 
 The Company of Landscapers is built using [Craft CMS](https://craftcms.com/) and is configured to run locally using [DDEV](https://ddev.readthedocs.io/en/stable/). Follow the steps below to get started.
 
