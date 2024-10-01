@@ -19,7 +19,7 @@ previewTargets:
         - '1'
 propagationMethod: all
 siteSettings:
-  102e3dff-3159-462b-a2ee-18957798f6d7: # The Company of Landscapers
+  102e3dff-3159-462b-a2ee-18957798f6d7: # company-of-landscapers
     enabledByDefault: true
     hasUrls: true
     template: portfolio-home/_entry

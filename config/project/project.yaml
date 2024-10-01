@@ -1,4 +1,4 @@
-dateModified: 1725440731
+dateModified: 1727805026
 elementSources:
   craft\elements\Entry:
     -
@@ -40,7 +40,7 @@ fs:
       subfolder: ''
       visibility: null
     type: craft\googlecloud\Fs
-    url: 'http://storage.googleapis.com/craft-gcs-storage/'
+    url: 'https://storage.googleapis.com/craft-gcs-storage/'
   hardDisk:
     hasUrls: true
     name: 'Hard Disk'
@@ -59,7 +59,7 @@ meta:
     8f75fe13-3a1f-44e6-a18d-1130662e3782: 'Portfolio Types' # Portfolio Types
     9cbc0be7-2e25-41b0-8cbe-798aa8e3a380: 'Experience Description' # Experience Description
     45d83c52-358c-4eb0-a0bf-a98df87151bd: 'Intro Description' # Intro Description
-    102e3dff-3159-462b-a2ee-18957798f6d7: 'The Company of Landscapers' # The Company of Landscapers
+    102e3dff-3159-462b-a2ee-18957798f6d7: company-of-landscapers # company-of-landscapers
     1501e96a-99b5-4803-8e1b-35d30f7ef800: 'Social Link' # Social Link
     4628a1f0-6346-446d-ae6b-0516f4466cbc: 'Experience Title' # Experience Title
     4979a5b7-ce59-477e-92d9-70531382c552: Address # Address
@@ -101,7 +101,7 @@ system:
   name: 'The Company of Landscapers'
   retryDuration: null
   schemaVersion: 5.0.0.21
-  timeZone: Europe/London
+  timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false
   defaultGroup: null
