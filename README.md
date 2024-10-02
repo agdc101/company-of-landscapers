@@ -14,7 +14,7 @@ Before starting, ensure you have the following installed on your machine:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/agdc101/company-of-landscapers.git
 cd your-repo
 ```
 
